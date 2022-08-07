@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideInfoController" customModule="LeThach_Intern_BasicApp" customModuleProvider="target">
+            <connections>
+                <outlet property="slideInfoCollectionView" destination="Bla-aM-kO0" id="B0b-EB-Uxe"/>
+                <outlet property="slideInfoPageControl" destination="X0s-lC-eWN" id="vCC-gz-0Ua"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iz-hx-Gk8">
+                    <rect key="frame" x="0.0" y="788.5" width="414" height="107.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-zq-fFA">
+                            <rect key="frame" x="16" y="16" width="145" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="BwD-9Z-IsV"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Đăng nhập">
+                                <backgroundConfiguration key="background" cornerRadius="24">
+                                    <color key="backgroundColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </backgroundConfiguration>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpH-fW-4Tz">
+                            <rect key="frame" x="191" y="16" width="207" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="PiI-yh-3mm"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Tạo tài khoản">
+                                <backgroundConfiguration key="background" cornerRadius="24">
+                                    <color key="strokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </backgroundConfiguration>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="baseForegroundColor" red="0.114" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="TpH-fW-4Tz" firstAttribute="top" secondItem="1iz-hx-Gk8" secondAttribute="top" constant="16" id="6AX-wd-MKn"/>
+                        <constraint firstItem="nSZ-zq-fFA" firstAttribute="top" secondItem="1iz-hx-Gk8" secondAttribute="top" constant="16" id="K3j-FD-sJx"/>
+                        <constraint firstItem="nSZ-zq-fFA" firstAttribute="width" secondItem="1iz-hx-Gk8" secondAttribute="width" multiplier="0.35" id="KdP-2y-2Nc"/>
+                        <constraint firstAttribute="trailing" secondItem="TpH-fW-4Tz" secondAttribute="trailing" constant="16" id="cSW-yx-kH0"/>
+                        <constraint firstItem="TpH-fW-4Tz" firstAttribute="width" secondItem="1iz-hx-Gk8" secondAttribute="width" multiplier="0.5" id="hcr-mj-fYJ"/>
+                        <constraint firstItem="nSZ-zq-fFA" firstAttribute="leading" secondItem="1iz-hx-Gk8" secondAttribute="leading" constant="16" id="wYd-Kq-Dy7"/>
+                    </constraints>
+                </view>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="X0s-lC-eWN">
+                    <rect key="frame" x="149" y="621" width="116" height="26"/>
+                    <color key="pageIndicatorTintColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="0.63847785599999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bla-aM-kO0">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
+                    <color key="backgroundColor" red="0.89800000000000002" green="0.89800000000000002" blue="0.89800000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Bla-aM-kO0" secondAttribute="height" multiplier="1 / 1.5" id="GtK-kz-4fc"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IDf-qq-otS">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.89800000000000002" green="0.89800000000000002" blue="0.89800000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="X0s-lC-eWN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HLP-Ql-Cu2"/>
+                <constraint firstItem="X0s-lC-eWN" firstAttribute="top" secondItem="Bla-aM-kO0" secondAttribute="bottom" id="HjL-eb-uZt"/>
+                <constraint firstItem="1iz-hx-Gk8" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="Kk4-Wk-JPp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1iz-hx-Gk8" secondAttribute="trailing" id="M9Q-uN-BdN"/>
+                <constraint firstItem="1iz-hx-Gk8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nid-OC-s0j"/>
+                <constraint firstItem="Bla-aM-kO0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="X83-7S-ano"/>
+                <constraint firstAttribute="bottom" secondItem="1iz-hx-Gk8" secondAttribute="bottom" id="hy7-f6-eYS"/>
+                <constraint firstItem="Bla-aM-kO0" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="n0g-GP-I4B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bla-aM-kO0" secondAttribute="trailing" id="wNo-3N-vF6"/>
+                <constraint firstItem="Bla-aM-kO0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xvX-m4-brz"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="80"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

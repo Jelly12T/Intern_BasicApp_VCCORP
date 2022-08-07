@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		811C6B62289CF1EE0055071D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6B61289CF1EE0055071D /* AppDelegate.swift */; };
+		811C6B64289CF1EE0055071D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6B63289CF1EE0055071D /* SceneDelegate.swift */; };
+		811C6B6B289CF1F00055071D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811C6B6A289CF1F00055071D /* Assets.xcassets */; };
+		811C6B6E289CF1F00055071D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811C6B6C289CF1F00055071D /* LaunchScreen.storyboard */; };
+		811C6B8C289D11F20055071D /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6B8B289D11F20055071D /* CollectionViewExtension.swift */; };
+		811C6B8F289D18380055071D /* SlideInforCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6B8D289D18380055071D /* SlideInforCell.swift */; };
+		811C6B90289D18380055071D /* SlideInforCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811C6B8E289D18380055071D /* SlideInforCell.xib */; };
+		811C6B97289D1E4B0055071D /* SlideInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6B95289D1E4B0055071D /* SlideInfoController.swift */; };
+		811C6B98289D1E4B0055071D /* SlideInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811C6B96289D1E4B0055071D /* SlideInfoController.xib */; };
+		81D53FC9289D245E003B14C2 /* SlideInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D53FC8289D245E003B14C2 /* SlideInfoModel.swift */; };
+		81D53FCD289D27AE003B14C2 /* SlideInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D53FCC289D27AE003B14C2 /* SlideInfo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		811C6B5E289CF1EE0055071D /* LeThach_Intern_BasicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeThach_Intern_BasicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		811C6B61289CF1EE0055071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		811C6B63289CF1EE0055071D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		811C6B6A289CF1F00055071D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		811C6B6D289CF1F00055071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		811C6B6F289CF1F00055071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		811C6B8B289D11F20055071D /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
+		811C6B8D289D18380055071D /* SlideInforCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInforCell.swift; sourceTree = "<group>"; };
+		811C6B8E289D18380055071D /* SlideInforCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideInforCell.xib; sourceTree = "<group>"; };
+		811C6B95289D1E4B0055071D /* SlideInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInfoController.swift; sourceTree = "<group>"; };
+		811C6B96289D1E4B0055071D /* SlideInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideInfoController.xib; sourceTree = "<group>"; };
+		81D53FC8289D245E003B14C2 /* SlideInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInfoModel.swift; sourceTree = "<group>"; };
+		81D53FCC289D27AE003B14C2 /* SlideInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInfo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		811C6B5B289CF1EE0055071D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		811C6B55289CF1EE0055071D = {
+			isa = PBXGroup;
+			children = (
+				811C6B60289CF1EE0055071D /* LeThach_Intern_BasicApp */,
+				811C6B5F289CF1EE0055071D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		811C6B5F289CF1EE0055071D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				811C6B5E289CF1EE0055071D /* LeThach_Intern_BasicApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		811C6B60289CF1EE0055071D /* LeThach_Intern_BasicApp */ = {
+			isa = PBXGroup;
+			children = (
+				811C6B78289CF2590055071D /* extension */,
+				811C6B77289CF2450055071D /* models */,
+				811C6B76289CF2380055071D /* view */,
+				811C6B75289CF22E0055071D /* controller */,
+				811C6B61289CF1EE0055071D /* AppDelegate.swift */,
+				811C6B63289CF1EE0055071D /* SceneDelegate.swift */,
+				811C6B6A289CF1F00055071D /* Assets.xcassets */,
+				811C6B6C289CF1F00055071D /* LaunchScreen.storyboard */,
+				811C6B6F289CF1F00055071D /* Info.plist */,
+			);
+			path = LeThach_Intern_BasicApp;
+			sourceTree = "<group>";
+		};
+		811C6B75289CF22E0055071D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		811C6B76289CF2380055071D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				811C6B8D289D18380055071D /* SlideInforCell.swift */,
+				811C6B8E289D18380055071D /* SlideInforCell.xib */,
+				811C6B95289D1E4B0055071D /* SlideInfoController.swift */,
+				811C6B96289D1E4B0055071D /* SlideInfoController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		811C6B77289CF2450055071D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				81D53FC8289D245E003B14C2 /* SlideInfoModel.swift */,
+				81D53FCC289D27AE003B14C2 /* SlideInfo.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		811C6B78289CF2590055071D /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				811C6B8B289D11F20055071D /* CollectionViewExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		811C6B5D289CF1EE0055071D /* LeThach_Intern_BasicApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 811C6B72289CF1F00055071D /* Build configuration list for PBXNativeTarget "LeThach_Intern_BasicApp" */;
+			buildPhases = (
+				811C6B5A289CF1EE0055071D /* Sources */,
+				811C6B5B289CF1EE0055071D /* Frameworks */,
+				811C6B5C289CF1EE0055071D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeThach_Intern_BasicApp;
+			productName = LeThach_Intern_BasicApp;
+			productReference = 811C6B5E289CF1EE0055071D /* LeThach_Intern_BasicApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		811C6B56289CF1EE0055071D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					811C6B5D289CF1EE0055071D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 811C6B59289CF1EE0055071D /* Build configuration list for PBXProject "LeThach_Intern_BasicApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 811C6B55289CF1EE0055071D;
+			productRefGroup = 811C6B5F289CF1EE0055071D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				811C6B5D289CF1EE0055071D /* LeThach_Intern_BasicApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		811C6B5C289CF1EE0055071D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				811C6B6E289CF1F00055071D /* LaunchScreen.storyboard in Resources */,
+				811C6B98289D1E4B0055071D /* SlideInfoController.xib in Resources */,
+				811C6B90289D18380055071D /* SlideInforCell.xib in Resources */,
+				811C6B6B289CF1F00055071D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		811C6B5A289CF1EE0055071D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				811C6B8C289D11F20055071D /* CollectionViewExtension.swift in Sources */,
+				81D53FC9289D245E003B14C2 /* SlideInfoModel.swift in Sources */,
+				811C6B62289CF1EE0055071D /* AppDelegate.swift in Sources */,
+				811C6B8F289D18380055071D /* SlideInforCell.swift in Sources */,
+				811C6B64289CF1EE0055071D /* SceneDelegate.swift in Sources */,
+				811C6B97289D1E4B0055071D /* SlideInfoController.swift in Sources */,
+				81D53FCD289D27AE003B14C2 /* SlideInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		811C6B6C289CF1F00055071D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				811C6B6D289CF1F00055071D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		811C6B70289CF1F00055071D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		811C6B71289CF1F00055071D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		811C6B73289CF1F00055071D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeThach_Intern_BasicApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hehe.LeThach-Intern-BasicApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		811C6B74289CF1F00055071D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeThach_Intern_BasicApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hehe.LeThach-Intern-BasicApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		811C6B59289CF1EE0055071D /* Build configuration list for PBXProject "LeThach_Intern_BasicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				811C6B70289CF1F00055071D /* Debug */,
+				811C6B71289CF1F00055071D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		811C6B72289CF1F00055071D /* Build configuration list for PBXNativeTarget "LeThach_Intern_BasicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				811C6B73289CF1F00055071D /* Debug */,
+				811C6B74289CF1F00055071D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 811C6B56289CF1EE0055071D /* Project object */;
+}
