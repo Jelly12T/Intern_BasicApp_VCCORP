@@ -91,6 +91,7 @@
 		811C6B75289CF22E0055071D /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				81BB613328A161C40013843B /* Signup */,
 				81D8470428A0AA0C00D37DBC /* SlideInfo */,
 			);
 			path = controller;
@@ -120,6 +121,14 @@
 				811C6B8B289D11F20055071D /* CollectionViewExtension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		81BB613328A161C40013843B /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				81D8470628A0AAF500D37DBC /* SignupController.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		81D8470228A0A9D400D37DBC /* SlideInfo */ = {
@@ -152,7 +161,6 @@
 		81D8470528A0AA9F00D37DBC /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				81D8470628A0AAF500D37DBC /* SignupController.swift */,
 				81D8470728A0AAF500D37DBC /* SignupController.xib */,
 			);
 			path = Signup;
