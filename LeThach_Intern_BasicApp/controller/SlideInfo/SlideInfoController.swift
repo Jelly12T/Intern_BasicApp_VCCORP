@@ -13,6 +13,8 @@ class SlideInfoController: UIViewController {
     var slideInfoModel = SlideInfoModel()
     var selectedIndexPage = 0
 
+
+
     // MARK: Outlet
     @IBOutlet weak private var slideInfoPageControl: UIPageControl!
     @IBOutlet weak private var slideInfoCollectionView: UICollectionView!
@@ -48,6 +50,13 @@ class SlideInfoController: UIViewController {
     func updatePageControl () {
         slideInfoPageControl.currentPage = selectedIndexPage
     }
+
+
+    @IBAction func nextToSignUpScreen(_ sender: Any) {
+        let vc = SignupController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 
 
 
@@ -115,7 +124,12 @@ extension SlideInfoController: UICollectionViewDataSource {
 extension SlideInfoController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let sizeCollectionView = self.slideInfoCollectionView.frame
-        print(sizeCollectionView)
         return CGSize(width: sizeCollectionView.width, height: sizeCollectionView.height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }

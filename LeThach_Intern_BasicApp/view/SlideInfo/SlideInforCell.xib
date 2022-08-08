@@ -6,6 +6,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,21 +25,21 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-iV-Urq">
-                        <rect key="frame" x="38" y="319" width="235" height="29"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="38" y="340" width="235" height="33"/>
+                        <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="24"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-yd-GXA">
-                        <rect key="frame" x="38" y="360" width="235" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="38" y="385" width="235" height="19.5"/>
+                        <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="14"/>
+                        <color key="textColor" red="0.21199999999999999" green="0.23899999999999999" blue="0.30599999999999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X0U-EU-Dqe">
-                        <rect key="frame" x="0.0" y="0.0" width="310" height="279"/>
+                        <rect key="frame" x="0.0" y="0.0" width="310" height="310"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="X0U-EU-Dqe" secondAttribute="height" multiplier="1:0.9" id="Ybs-Vr-kqG"/>
+                            <constraint firstAttribute="width" secondItem="X0U-EU-Dqe" secondAttribute="height" multiplier="1:1" id="Ybs-Vr-kqG"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -40,7 +48,7 @@
             <constraints>
                 <constraint firstItem="X0U-EU-Dqe" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="6hE-g9-z0j"/>
                 <constraint firstAttribute="trailing" secondItem="dbU-yd-GXA" secondAttribute="trailing" constant="37" id="Kiv-pF-XKM"/>
-                <constraint firstItem="7N5-iV-Urq" firstAttribute="top" secondItem="X0U-EU-Dqe" secondAttribute="bottom" constant="40" id="Ojc-Ki-22h"/>
+                <constraint firstItem="7N5-iV-Urq" firstAttribute="top" secondItem="X0U-EU-Dqe" secondAttribute="bottom" constant="30" id="Ojc-Ki-22h"/>
                 <constraint firstAttribute="trailing" secondItem="X0U-EU-Dqe" secondAttribute="trailing" id="aN0-Ab-FtP"/>
                 <constraint firstItem="X0U-EU-Dqe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ek9-Le-chn"/>
                 <constraint firstItem="dbU-yd-GXA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="38" id="et0-iW-rVM"/>

@@ -21,9 +21,9 @@ class SlideInforCell: UICollectionViewCell {
     // MARK: Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("cell size", width, heigth)
         // Initialization code
     }
+
 
     // MARK: Bind data
     func bind (model: SlideInfo) {

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,6 +35,9 @@
                                 <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="nextToSignUpScreen:" destination="-1" eventType="touchUpInside" id="Rie-Ni-tOA"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpH-fW-4Tz">
                             <rect key="frame" x="191" y="16" width="207" height="48"/>
@@ -52,7 +54,7 @@
                             </buttonConfiguration>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="TpH-fW-4Tz" firstAttribute="top" secondItem="1iz-hx-Gk8" secondAttribute="top" constant="16" id="6AX-wd-MKn"/>
                         <constraint firstItem="nSZ-zq-fFA" firstAttribute="top" secondItem="1iz-hx-Gk8" secondAttribute="top" constant="16" id="K3j-FD-sJx"/>
@@ -69,7 +71,7 @@
                 </pageControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bla-aM-kO0">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
-                    <color key="backgroundColor" red="0.89800000000000002" green="0.89800000000000002" blue="0.89800000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Bla-aM-kO0" secondAttribute="height" multiplier="1 / 1.5" id="GtK-kz-4fc"/>
                     </constraints>
@@ -98,9 +100,4 @@
             <point key="canvasLocation" x="132" y="80"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

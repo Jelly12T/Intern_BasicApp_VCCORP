@@ -16,8 +16,12 @@
 		811C6B90289D18380055071D /* SlideInforCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811C6B8E289D18380055071D /* SlideInforCell.xib */; };
 		811C6B97289D1E4B0055071D /* SlideInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6B95289D1E4B0055071D /* SlideInfoController.swift */; };
 		811C6B98289D1E4B0055071D /* SlideInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811C6B96289D1E4B0055071D /* SlideInfoController.xib */; };
+		8172DD3928A112F600EFA73E /* ColorAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8172DD3828A112F600EFA73E /* ColorAppModel.swift */; };
+		81BB613228A152FF0013843B /* Nunito_Sans in Resources */ = {isa = PBXBuildFile; fileRef = 81BB613128A152FE0013843B /* Nunito_Sans */; };
 		81D53FC9289D245E003B14C2 /* SlideInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D53FC8289D245E003B14C2 /* SlideInfoModel.swift */; };
 		81D53FCD289D27AE003B14C2 /* SlideInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D53FCC289D27AE003B14C2 /* SlideInfo.swift */; };
+		81D8470828A0AAF500D37DBC /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8470628A0AAF500D37DBC /* SignupController.swift */; };
+		81D8470928A0AAF500D37DBC /* SignupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8470728A0AAF500D37DBC /* SignupController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +36,12 @@
 		811C6B8E289D18380055071D /* SlideInforCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideInforCell.xib; sourceTree = "<group>"; };
 		811C6B95289D1E4B0055071D /* SlideInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInfoController.swift; sourceTree = "<group>"; };
 		811C6B96289D1E4B0055071D /* SlideInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideInfoController.xib; sourceTree = "<group>"; };
+		8172DD3828A112F600EFA73E /* ColorAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAppModel.swift; sourceTree = "<group>"; };
+		81BB613128A152FE0013843B /* Nunito_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Nunito_Sans; sourceTree = "<group>"; };
 		81D53FC8289D245E003B14C2 /* SlideInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInfoModel.swift; sourceTree = "<group>"; };
 		81D53FCC289D27AE003B14C2 /* SlideInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInfo.swift; sourceTree = "<group>"; };
+		81D8470628A0AAF500D37DBC /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		81D8470728A0AAF500D37DBC /* SignupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 				811C6B6A289CF1F00055071D /* Assets.xcassets */,
 				811C6B6C289CF1F00055071D /* LaunchScreen.storyboard */,
 				811C6B6F289CF1F00055071D /* Info.plist */,
+				81BB613128A152FE0013843B /* Nunito_Sans */,
 			);
 			path = LeThach_Intern_BasicApp;
 			sourceTree = "<group>";
@@ -82,6 +91,7 @@
 		811C6B75289CF22E0055071D /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				81D8470428A0AA0C00D37DBC /* SlideInfo */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -89,10 +99,8 @@
 		811C6B76289CF2380055071D /* view */ = {
 			isa = PBXGroup;
 			children = (
-				811C6B8D289D18380055071D /* SlideInforCell.swift */,
-				811C6B8E289D18380055071D /* SlideInforCell.xib */,
-				811C6B95289D1E4B0055071D /* SlideInfoController.swift */,
-				811C6B96289D1E4B0055071D /* SlideInfoController.xib */,
+				81D8470528A0AA9F00D37DBC /* Signup */,
+				81D8470228A0A9D400D37DBC /* SlideInfo */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -100,8 +108,8 @@
 		811C6B77289CF2450055071D /* models */ = {
 			isa = PBXGroup;
 			children = (
-				81D53FC8289D245E003B14C2 /* SlideInfoModel.swift */,
-				81D53FCC289D27AE003B14C2 /* SlideInfo.swift */,
+				81D8470328A0A9F100D37DBC /* SlideInfo */,
+				8172DD3828A112F600EFA73E /* ColorAppModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -112,6 +120,42 @@
 				811C6B8B289D11F20055071D /* CollectionViewExtension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		81D8470228A0A9D400D37DBC /* SlideInfo */ = {
+			isa = PBXGroup;
+			children = (
+				811C6B96289D1E4B0055071D /* SlideInfoController.xib */,
+				811C6B8E289D18380055071D /* SlideInforCell.xib */,
+			);
+			path = SlideInfo;
+			sourceTree = "<group>";
+		};
+		81D8470328A0A9F100D37DBC /* SlideInfo */ = {
+			isa = PBXGroup;
+			children = (
+				81D53FCC289D27AE003B14C2 /* SlideInfo.swift */,
+				81D53FC8289D245E003B14C2 /* SlideInfoModel.swift */,
+			);
+			path = SlideInfo;
+			sourceTree = "<group>";
+		};
+		81D8470428A0AA0C00D37DBC /* SlideInfo */ = {
+			isa = PBXGroup;
+			children = (
+				811C6B8D289D18380055071D /* SlideInforCell.swift */,
+				811C6B95289D1E4B0055071D /* SlideInfoController.swift */,
+			);
+			path = SlideInfo;
+			sourceTree = "<group>";
+		};
+		81D8470528A0AA9F00D37DBC /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				81D8470628A0AAF500D37DBC /* SignupController.swift */,
+				81D8470728A0AAF500D37DBC /* SignupController.xib */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +216,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BB613228A152FF0013843B /* Nunito_Sans in Resources */,
 				811C6B6E289CF1F00055071D /* LaunchScreen.storyboard in Resources */,
+				81D8470928A0AAF500D37DBC /* SignupController.xib in Resources */,
 				811C6B98289D1E4B0055071D /* SlideInfoController.xib in Resources */,
 				811C6B90289D18380055071D /* SlideInforCell.xib in Resources */,
 				811C6B6B289CF1F00055071D /* Assets.xcassets in Resources */,
@@ -189,9 +235,11 @@
 				811C6B8C289D11F20055071D /* CollectionViewExtension.swift in Sources */,
 				81D53FC9289D245E003B14C2 /* SlideInfoModel.swift in Sources */,
 				811C6B62289CF1EE0055071D /* AppDelegate.swift in Sources */,
+				81D8470828A0AAF500D37DBC /* SignupController.swift in Sources */,
 				811C6B8F289D18380055071D /* SlideInforCell.swift in Sources */,
 				811C6B64289CF1EE0055071D /* SceneDelegate.swift in Sources */,
 				811C6B97289D1E4B0055071D /* SlideInfoController.swift in Sources */,
+				8172DD3928A112F600EFA73E /* ColorAppModel.swift in Sources */,
 				81D53FCD289D27AE003B14C2 /* SlideInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLXR7ZA23L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LeThach_Intern_BasicApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -342,7 +391,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hehe.LeThach-Intern-BasicApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hehe.LeThach-Intern-BasicApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -357,6 +406,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLXR7ZA23L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LeThach_Intern_BasicApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -368,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hehe.LeThach-Intern-BasicApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hehe.LeThach-Intern-BasicApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
