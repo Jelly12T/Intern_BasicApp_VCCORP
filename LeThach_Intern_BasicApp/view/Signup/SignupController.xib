@@ -104,6 +104,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <connections>
+                                <action selector="edidDidBeginTxt:" destination="-1" eventType="editingDidBegin" id="JhF-Pq-a0o"/>
                                 <action selector="inpuTextFileChanged:" destination="-1" eventType="editingChanged" id="OAz-B1-FyQ"/>
                             </connections>
                         </textField>

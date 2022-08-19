@@ -12,8 +12,6 @@ class SignupController: UIViewController {
     // MARK: Variabel
     let colorApp = ColorAppModel()
 
-
-
     // MARK: Outlet
     @IBOutlet weak private var inputPhoneView: UIView!
     @IBOutlet weak private var inputTextField: UITextField!
@@ -73,12 +71,29 @@ class SignupController: UIViewController {
 
     // MARK: Action
     @IBAction func nextButtonDidTap(_ sender: Any) {
+        let checkPhoneNumber = checkPhoneNumber()
+        print(checkPhoneNumber)
+        if !checkPhoneNumber {
+            let message = "Định dạng số điện thoại không đúng"
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true)
 
+        }
+        if checkPhoneNumber {
+            let vc = OptViewController()
+            vc.phoneString = inputTextField.text!
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
+    @IBAction func edidDidBeginTxt(_ sender: Any) {
+        configInputview(flag: true)
+    }
     @IBAction func popBntDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+
 
     @IBAction func inpuTextFileChanged(_ sender: Any) {
         configInputview(flag: true)
@@ -102,7 +117,25 @@ class SignupController: UIViewController {
         return false
     }
 
+    func checkPhoneNumber() -> Bool{
+        guard let valueOfTextField = inputTextField.text else {
+            return false
+        }
 
+        if valueOfTextField.first == "0"{
+            if valueOfTextField.count != 10 {
+                return false
+            }
 
+            if valueOfTextField == "0000000000" {
+                return false
+            }
+        }
 
+        if valueOfTextField.count != 9 {
+            return false
+        }
+
+        return true
+    }
 }

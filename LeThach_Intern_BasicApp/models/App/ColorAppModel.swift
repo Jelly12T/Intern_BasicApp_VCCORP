@@ -13,5 +13,8 @@ class ColorAppModel {
     let buttonSecondColor =  UIColor(red: 0.173, green: 0.525, blue: 0.404, alpha: 0.5)
     let boderDisbaleColor = UIColor(red: 0.933, green: 0.937, blue: 0.957, alpha: 1)
     let grayCustomColor = UIColor(red: 0.59, green: 0.61, blue: 0.67, alpha: 1)
+    let boderFocusColor = UIColor(red: 0.173, green: 0.525, blue: 0.404, alpha: 1)
+  //  let lblGray =
+    
 
 }

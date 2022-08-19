@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="LeThach_Intern_BasicApp" customModuleProvider="target">
+            <connections>
+                <outlet property="articleCollectionView" destination="6Pw-kj-e4f" id="ntS-Le-5d1"/>
+                <outlet property="doctorCollectionView" destination="045-eN-KiH" id="EJz-P9-9Gv"/>
+                <outlet property="homeView" destination="PMj-pF-FED" id="yO5-qM-PSa"/>
+                <outlet property="promotionCollectionView" destination="g6p-Wx-nd3" id="azt-eb-ECs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="1025"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="Ucn-cQ-Vdc">
+                    <rect key="frame" x="0.0" y="0.0" width="418" height="161"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Ucn-cQ-Vdc" secondAttribute="height" multiplier="1/ 0.385" id="9Yj-s2-ygp"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lê Thạch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-v9-eou">
+                    <rect key="frame" x="19" y="61" width="63" height="20.5"/>
+                    <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gy3-vM-ID5">
+                    <rect key="frame" x="360" y="60" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="29z-py-oh5"/>
+                        <constraint firstAttribute="width" constant="42" id="Hwd-ES-Lks"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="">
+                        <backgroundConfiguration key="background" cornerRadius="26" image="Avatar.png">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                    </buttonConfiguration>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-TB-QMo">
+                    <rect key="frame" x="16" y="87.5" width="95.5" height="20.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-3x-pTo">
+                            <rect key="frame" x="0.0" y="6.5" width="8" height="8"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="8" id="2Zg-S3-xgh"/>
+                                <constraint firstAttribute="height" constant="8" id="YcN-x6-5dO"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" cornerRadius="26">
+                                    <color key="backgroundColor" red="0.066666666669999999" green="1" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </backgroundConfiguration>
+                            </buttonConfiguration>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang trực tuyến" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNI-UK-x3I">
+                            <rect key="frame" x="14" y="2" width="86.5" height="16.5"/>
+                            <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="SbV-3x-pTo" firstAttribute="leading" secondItem="bg5-TB-QMo" secondAttribute="leading" id="8xX-7I-jv9"/>
+                        <constraint firstItem="SbV-3x-pTo" firstAttribute="centerY" secondItem="bg5-TB-QMo" secondAttribute="centerY" id="K7R-77-FCi"/>
+                        <constraint firstItem="sNI-UK-x3I" firstAttribute="centerY" secondItem="SbV-3x-pTo" secondAttribute="centerY" id="KHv-eM-NBq"/>
+                        <constraint firstItem="sNI-UK-x3I" firstAttribute="leading" secondItem="SbV-3x-pTo" secondAttribute="trailing" constant="6" id="WQk-qm-Eu7"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6N-jn-DOc">
+                    <rect key="frame" x="0.0" y="145" width="418" height="880"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMj-pF-FED">
+                            <rect key="frame" x="0.0" y="0.0" width="418" height="835"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tin tức" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIU-WV-7tA">
+                                    <rect key="frame" x="16" y="20" width="54" height="24"/>
+                                    <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="17"/>
+                                    <color key="textColor" red="0.114" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFU-Y7-xBl">
+                                    <rect key="frame" x="297" y="16" width="101" height="32"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Xem tất cả" imagePadding="5">
+                                        <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                                        <fontDescription key="titleFontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="13"/>
+                                        <color key="baseForegroundColor" red="0.17299999999999999" green="0.52500000000000002" blue="0.40400000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="viewAllArticleBnt:" destination="-1" eventType="touchUpInside" id="doi-qE-w7k"/>
+                                    </connections>
+                                </button>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6Pw-kj-e4f">
+                                    <rect key="frame" x="16" y="60" width="402" height="220"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="220" id="7ZR-86-sJ3"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3AK-Ro-gKB">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khuyến mãi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-iR-HGJ">
+                                    <rect key="frame" x="16" y="308" width="92.5" height="24"/>
+                                    <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="17"/>
+                                    <color key="textColor" red="0.114" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sb-dN-cCF">
+                                    <rect key="frame" x="297" y="308" width="101" height="32"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Xem tất cả" imagePadding="5">
+                                        <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                                        <fontDescription key="titleFontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="13"/>
+                                        <color key="baseForegroundColor" red="0.17299999999999999" green="0.52500000000000002" blue="0.40400000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="viewAllPromotionBnt:" destination="-1" eventType="touchUpInside" id="a6q-tL-I3Y"/>
+                                    </connections>
+                                </button>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="g6p-Wx-nd3">
+                                    <rect key="frame" x="16" y="356" width="402" height="220"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="220" id="nWi-H5-BKd"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="sPW-fm-GdY"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1rX-x0-1Rc">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi6-Ku-OQj">
+                                    <rect key="frame" x="297" y="592" width="101" height="32"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Xem tất cả" imagePadding="5">
+                                        <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                                        <fontDescription key="titleFontDescription" name="NunitoSans-SemiBold" family="Nunito Sans" pointSize="13"/>
+                                        <color key="baseForegroundColor" red="0.17299999999999999" green="0.52500000000000002" blue="0.40400000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="viewAllDoctorBnt:" destination="-1" eventType="touchUpInside" id="c6v-nU-xbx"/>
+                                    </connections>
+                                </button>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="045-eN-KiH">
+                                    <rect key="frame" x="16" y="640" width="402" height="185"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="185" id="hNT-8u-3am"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f31-gW-JId">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới thiệu bác sĩ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grr-i6-tYh">
+                                    <rect key="frame" x="16" y="604" width="125" height="24"/>
+                                    <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="17"/>
+                                    <color key="textColor" red="0.114" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="835" id="4XH-ab-Fy5"/>
+                                <constraint firstItem="UIU-WV-7tA" firstAttribute="leading" secondItem="PMj-pF-FED" secondAttribute="leading" constant="16" id="8Nb-Pi-YQI"/>
+                                <constraint firstItem="Grr-i6-tYh" firstAttribute="leading" secondItem="PMj-pF-FED" secondAttribute="leading" constant="16" id="AAL-4L-hnU"/>
+                                <constraint firstItem="6Pw-kj-e4f" firstAttribute="top" secondItem="UIU-WV-7tA" secondAttribute="bottom" constant="16" id="AAj-V3-OxA"/>
+                                <constraint firstItem="dEz-iR-HGJ" firstAttribute="leading" secondItem="PMj-pF-FED" secondAttribute="leading" constant="16" id="Eiu-XP-1Nq"/>
+                                <constraint firstItem="g6p-Wx-nd3" firstAttribute="leading" secondItem="PMj-pF-FED" secondAttribute="leading" constant="16" id="HT5-ON-BjN"/>
+                                <constraint firstAttribute="trailing" secondItem="6Pw-kj-e4f" secondAttribute="trailing" id="MqT-mJ-wU2"/>
+                                <constraint firstAttribute="trailing" secondItem="g6p-Wx-nd3" secondAttribute="trailing" id="NwG-Qw-xgx"/>
+                                <constraint firstItem="dEz-iR-HGJ" firstAttribute="top" secondItem="6Pw-kj-e4f" secondAttribute="bottom" constant="28" id="PeR-a8-Bwx"/>
+                                <constraint firstAttribute="trailing" secondItem="045-eN-KiH" secondAttribute="trailing" id="PkQ-02-egB"/>
+                                <constraint firstItem="g6p-Wx-nd3" firstAttribute="top" secondItem="3sb-dN-cCF" secondAttribute="bottom" constant="16" id="T3u-HI-sIt"/>
+                                <constraint firstItem="045-eN-KiH" firstAttribute="leading" secondItem="PMj-pF-FED" secondAttribute="leading" constant="16" id="Tnj-r3-P7W"/>
+                                <constraint firstItem="UIU-WV-7tA" firstAttribute="top" secondItem="PMj-pF-FED" secondAttribute="top" constant="20" id="VET-Dx-V2z"/>
+                                <constraint firstItem="3sb-dN-cCF" firstAttribute="top" secondItem="6Pw-kj-e4f" secondAttribute="bottom" constant="28" id="Vk8-Tr-jjX"/>
+                                <constraint firstAttribute="trailing" secondItem="JFU-Y7-xBl" secondAttribute="trailing" constant="20" id="cci-4f-cdZ"/>
+                                <constraint firstItem="6Pw-kj-e4f" firstAttribute="leading" secondItem="PMj-pF-FED" secondAttribute="leading" constant="16" id="jSS-WG-5VH"/>
+                                <constraint firstItem="045-eN-KiH" firstAttribute="top" secondItem="gi6-Ku-OQj" secondAttribute="bottom" constant="16" id="p1Z-5T-Ra3"/>
+                                <constraint firstAttribute="trailing" secondItem="3sb-dN-cCF" secondAttribute="trailing" constant="20" id="st8-wN-yVD"/>
+                                <constraint firstItem="JFU-Y7-xBl" firstAttribute="top" secondItem="PMj-pF-FED" secondAttribute="top" constant="16" id="uDS-WP-JVX"/>
+                                <constraint firstAttribute="trailing" secondItem="gi6-Ku-OQj" secondAttribute="trailing" constant="20" id="wJb-PJ-fh3"/>
+                                <constraint firstItem="Grr-i6-tYh" firstAttribute="top" secondItem="g6p-Wx-nd3" secondAttribute="bottom" constant="28" id="xqy-ko-OZe"/>
+                                <constraint firstItem="gi6-Ku-OQj" firstAttribute="top" secondItem="g6p-Wx-nd3" secondAttribute="bottom" constant="16" id="yHU-4e-GaT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="PMj-pF-FED" firstAttribute="top" secondItem="a6N-jn-DOc" secondAttribute="top" id="968-gJ-E07"/>
+                        <constraint firstAttribute="trailing" secondItem="PMj-pF-FED" secondAttribute="trailing" id="Nqj-OF-HiF"/>
+                        <constraint firstItem="PMj-pF-FED" firstAttribute="width" secondItem="a6N-jn-DOc" secondAttribute="width" id="R5v-Ra-gan"/>
+                        <constraint firstItem="PMj-pF-FED" firstAttribute="leading" secondItem="a6N-jn-DOc" secondAttribute="leading" id="lep-Qh-Xti"/>
+                        <constraint firstAttribute="bottom" secondItem="PMj-pF-FED" secondAttribute="bottom" id="wm1-IS-2TP"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="U0b-cj-Zae"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="jfr-d0-gyX"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="bg5-TB-QMo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="1Vb-t9-SFF"/>
+                <constraint firstItem="Ucn-cQ-Vdc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3WF-En-EXb"/>
+                <constraint firstItem="Ucn-cQ-Vdc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9Oh-P1-mkU"/>
+                <constraint firstItem="a6N-jn-DOc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="G8z-Ph-ptT"/>
+                <constraint firstItem="bg5-TB-QMo" firstAttribute="width" secondItem="hyh-v9-eou" secondAttribute="width" multiplier="1.5" constant="1" id="J29-Kr-gRy"/>
+                <constraint firstItem="Gy3-vM-ID5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="Kfi-pH-lmO"/>
+                <constraint firstItem="bg5-TB-QMo" firstAttribute="height" secondItem="hyh-v9-eou" secondAttribute="height" id="MLG-8D-J3t"/>
+                <constraint firstAttribute="bottom" secondItem="a6N-jn-DOc" secondAttribute="bottom" id="Vxi-ev-Zdb"/>
+                <constraint firstItem="hyh-v9-eou" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="61" id="Wzn-or-q54"/>
+                <constraint firstAttribute="trailing" secondItem="a6N-jn-DOc" secondAttribute="trailing" id="XcR-8D-yHq"/>
+                <constraint firstItem="a6N-jn-DOc" firstAttribute="top" secondItem="Ucn-cQ-Vdc" secondAttribute="bottom" constant="-16" id="Z6G-uf-GdF"/>
+                <constraint firstItem="hyh-v9-eou" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="gOu-su-w6u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ucn-cQ-Vdc" secondAttribute="trailing" id="igP-4c-PIz"/>
+                <constraint firstItem="bg5-TB-QMo" firstAttribute="top" secondItem="hyh-v9-eou" secondAttribute="bottom" constant="6" id="jzo-En-o45"/>
+                <constraint firstItem="Ucn-cQ-Vdc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="thZ-Wi-dlI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gy3-vM-ID5" secondAttribute="trailing" constant="16" id="ySK-U4-Hxn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="150.72463768115944" y="209.26339285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Avatar.png" width="42" height="42"/>
+        <image name="Home" width="375" height="143"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

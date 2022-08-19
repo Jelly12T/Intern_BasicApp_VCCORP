@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptViewController" customModule="LeThach_Intern_BasicApp" customModuleProvider="target">
+            <connections>
+                <outlet property="continueBtn" destination="C6k-wa-6OK" id="k2r-LB-CdH"/>
+                <outlet property="errorLbl" destination="YIS-wj-ryj" id="XL6-c5-IjT"/>
+                <outlet property="introLbl" destination="XE0-0B-3CY" id="Yfa-6M-DhG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-mU-4xo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAP-Vz-3lH">
+                            <rect key="frame" x="16" y="6" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="T9G-fn-4VC"/>
+                                <constraint firstAttribute="height" constant="32" id="hX6-oQ-ZXX"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                <backgroundConfiguration key="background" cornerRadius="26">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </backgroundConfiguration>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="backBnt:" destination="-1" eventType="touchUpInside" id="Uvo-ZC-oVt"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xác minh số điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds8-Gl-63W">
+                            <rect key="frame" x="113" y="11.5" width="188.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Vjw-ji-036"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95294117649999999" green="0.96078431369999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="ds8-Gl-63W" firstAttribute="centerX" secondItem="ee8-mU-4xo" secondAttribute="centerX" id="94G-Ze-UFC"/>
+                        <constraint firstItem="EAP-Vz-3lH" firstAttribute="leading" secondItem="ee8-mU-4xo" secondAttribute="leading" constant="16" id="GUY-af-PKJ"/>
+                        <constraint firstAttribute="height" constant="44" id="LCB-aO-RcA"/>
+                        <constraint firstItem="ds8-Gl-63W" firstAttribute="centerY" secondItem="ee8-mU-4xo" secondAttribute="centerY" id="h0s-qy-HCN"/>
+                        <constraint firstItem="EAP-Vz-3lH" firstAttribute="centerY" secondItem="ee8-mU-4xo" secondAttribute="centerY" id="kyM-WY-SGk"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng nhập mã gồm 4 chữ số đã được gửi đến bạn vào số điện thoại +84 356 461 831" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE0-0B-3CY">
+                    <rect key="frame" x="24" y="120" width="366" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="578-lP-W9D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6k-wa-6OK">
+                    <rect key="frame" x="144" y="824" width="88" height="37.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Tiếp Tục">
+                        <backgroundConfiguration key="background" cornerRadius="24"/>
+                        <fontDescription key="titleFontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="17"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập sai mã xác thực" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIS-wj-ryj">
+                    <rect key="frame" x="24" y="238" width="366" height="17"/>
+                    <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="12"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.95294117649999999" green="0.96078431369999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="XE0-0B-3CY" firstAttribute="top" secondItem="ee8-mU-4xo" secondAttribute="bottom" constant="32" id="3py-up-O2F"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XE0-0B-3CY" secondAttribute="trailing" constant="24" id="4EF-47-Tig"/>
+                <constraint firstItem="YIS-wj-ryj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="FwN-yV-JX0"/>
+                <constraint firstItem="XE0-0B-3CY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="PCF-KS-s4L"/>
+                <constraint firstItem="ee8-mU-4xo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XSN-u3-5sY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ee8-mU-4xo" secondAttribute="trailing" id="XV7-wZ-9op"/>
+                <constraint firstItem="ee8-mU-4xo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Zsq-zI-bOc"/>
+                <constraint firstItem="YIS-wj-ryj" firstAttribute="top" secondItem="XE0-0B-3CY" secondAttribute="bottom" constant="78" id="g8g-OU-USl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YIS-wj-ryj" secondAttribute="trailing" constant="24" id="xx1-Nh-j6s"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="49.553571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

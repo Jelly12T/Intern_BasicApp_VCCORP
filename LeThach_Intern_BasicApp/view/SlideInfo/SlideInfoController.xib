@@ -71,7 +71,7 @@
                 </pageControl>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bla-aM-kO0">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
-                    <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Bla-aM-kO0" secondAttribute="height" multiplier="1 / 1.5" id="GtK-kz-4fc"/>
                     </constraints>
@@ -84,7 +84,7 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.89800000000000002" green="0.89800000000000002" blue="0.89800000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="X0s-lC-eWN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HLP-Ql-Cu2"/>
                 <constraint firstItem="X0s-lC-eWN" firstAttribute="top" secondItem="Bla-aM-kO0" secondAttribute="bottom" id="HjL-eb-uZt"/>

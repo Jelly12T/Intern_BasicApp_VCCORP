@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoctorController" customModule="LeThach_Intern_BasicApp" customModuleProvider="target">
+            <connections>
+                <outlet property="listDoctorCollectionVIew" destination="zau-c4-4C3" id="kea-Am-lib"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Dl-vo-6jW">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOX-O6-FA0">
+                            <rect key="frame" x="25" y="6" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="2Yg-5R-ynM"/>
+                                <constraint firstAttribute="width" constant="32" id="w5H-WY-ER6"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                <backgroundConfiguration key="background" cornerRadius="26" strokeWidth="2">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="strokeColor" red="0.95299999999999996" green="0.96078431369999995" blue="0.98399999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </backgroundConfiguration>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="backBnt:" destination="-1" eventType="touchUpInside" id="BTz-0f-khh"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bác sĩ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QG-nh-Mzd">
+                            <rect key="frame" x="182.5" y="9.5" width="49" height="25"/>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
+                            <color key="textColor" red="0.14099999999999999" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="KOX-O6-FA0" firstAttribute="leading" secondItem="6Dl-vo-6jW" secondAttribute="leading" constant="25" id="NsO-Tq-ByF"/>
+                        <constraint firstItem="3QG-nh-Mzd" firstAttribute="centerX" secondItem="6Dl-vo-6jW" secondAttribute="centerX" id="Y0q-jH-HCt"/>
+                        <constraint firstItem="3QG-nh-Mzd" firstAttribute="centerY" secondItem="6Dl-vo-6jW" secondAttribute="centerY" id="dok-kE-bzG"/>
+                        <constraint firstItem="KOX-O6-FA0" firstAttribute="centerY" secondItem="6Dl-vo-6jW" secondAttribute="centerY" id="kCt-AY-F8m"/>
+                        <constraint firstAttribute="height" constant="44" id="wOV-aE-OKg"/>
+                        <constraint firstItem="3QG-nh-Mzd" firstAttribute="centerY" secondItem="KOX-O6-FA0" secondAttribute="centerY" id="x7Q-Id-N6r"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-Bo-2NM">
+                    <rect key="frame" x="0.0" y="88" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.93300000000000005" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="wzS-GY-nC5"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zau-c4-4C3">
+                    <rect key="frame" x="16" y="101" width="379" height="795"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uxg-w1-M5U">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6Dl-vo-6jW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3BY-1f-P2n"/>
+                <constraint firstItem="zau-c4-4C3" firstAttribute="top" secondItem="hFw-Bo-2NM" secondAttribute="bottom" constant="12" id="Cd0-oe-k83"/>
+                <constraint firstItem="hFw-Bo-2NM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fc5-8L-V3V"/>
+                <constraint firstItem="6Dl-vo-6jW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="J5d-8q-Mcg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zau-c4-4C3" secondAttribute="trailing" constant="19" id="QnV-gb-fAY"/>
+                <constraint firstAttribute="trailing" secondItem="hFw-Bo-2NM" secondAttribute="trailing" id="ZZW-1O-nQS"/>
+                <constraint firstItem="hFw-Bo-2NM" firstAttribute="top" secondItem="6Dl-vo-6jW" secondAttribute="bottom" id="aph-gQ-rIo"/>
+                <constraint firstAttribute="bottom" secondItem="zau-c4-4C3" secondAttribute="bottom" id="klx-DC-p3Z"/>
+                <constraint firstItem="zau-c4-4C3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="urj-Kl-N7b"/>
+                <constraint firstItem="6Dl-vo-6jW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xnc-6w-Ip6"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="37"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
