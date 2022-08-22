@@ -10,7 +10,7 @@ import UIKit
 
 protocol OtpViewDelegate: AnyObject {
     func didTextChange(otpView: OtpView , listOtpItemview: [OtpItemView])
-    func checkShowKeyBoard(otpView: OtpView , stateKeyBoard: Bool , notificaiontInfor: Notification)
+
 }
 
 
@@ -48,10 +48,9 @@ class OtpView: UIView , UIKeyInput {
         for index  in 0 ... 5 {
             let itemOtpview = OtpItemView()
             itemOtpview.addTarget(self, action: #selector(otpItemDidTap(_:)), for: .touchUpInside)
-            keyboardNotification()
             itemOtpview.translatesAutoresizingMaskIntoConstraints = false
             itemOtpview.tag = index
-
+            itemOtpview.cornerRadius = 8
             if index == 0 {
                 itemOtpview.isFocusing = true
                 itemOtpview.focus()
@@ -107,7 +106,7 @@ class OtpView: UIView , UIKeyInput {
     }
 
     func backToFocusing(){
-        self.listOtpItemView[self.indexFocused + 1].lock()
+        self.listOtpItemView[min(self.indexFocused + 1, self.listOtpItemView.count - 1)].lock()
         self.listOtpItemView[ self.indexFocused].focus()
     }
 
@@ -115,14 +114,7 @@ class OtpView: UIView , UIKeyInput {
 
     }
 
-    func keyboardNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyBoardShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
 
-    }
-
-    @objc func keyBoardShow(notification: Notification) {
-        self.delegate?.checkShowKeyBoard(otpView: self, stateKeyBoard: true ,notificaiontInfor: notification)
-    }
 
 
 
@@ -153,7 +145,14 @@ extension OtpView {
     }
 
     func deleteBackward() {
-        
+        if hasText {
+            self.listOtpItemView[self.indexFocused].optLbl!.text! = ""
+          //  self.listOtpItemView[self.indexFocused].lock()
+            self.indexFocused = min(self.indexFocused , self.listOtpItemView.count - 1)
+            updateFocusing(isNexTo: false)
+            self.delegate?.didTextChange(otpView: self, listOtpItemview: self.listOtpItemView)
+            return
+        }
         self.listOtpItemView[self.indexFocused].optLbl!.text! = ""
         self.listOtpItemView[self.indexFocused].lock()
         self.indexFocused = max(0, self.indexFocused - 1)

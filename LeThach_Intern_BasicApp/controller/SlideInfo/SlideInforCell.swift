@@ -11,6 +11,7 @@ class SlideInforCell: UICollectionViewCell {
 
     let width = UIScreen.main.bounds.size.width
     let heigth = UIScreen.main.bounds.size.height
+   
 
 
     // MARK: Outluet
@@ -27,9 +28,11 @@ class SlideInforCell: UICollectionViewCell {
 
     // MARK: Bind data
     func bind (model: SlideInfo) {
+
         self.slideInfoCellImageView.image = UIImage(named: model.nameImage)
         self.slideInforTitleLabel.text = model.title
         self.slideInForSubtitleLabel.text = model.subTitle
     }
+
 
 }

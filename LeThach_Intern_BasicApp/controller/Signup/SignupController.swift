@@ -19,7 +19,7 @@ class SignupController: UIViewController {
 
     @IBOutlet weak private var contactPhoneView: UIView!
 
-    @IBOutlet weak private var hotlineLbl: UIButton!
+
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +62,9 @@ class SignupController: UIViewController {
     }
 
     func updateNextButtonForEnabed(stateOfButton: Bool) {
-        nextButton.isUserInteractionEnabled = stateOfButton
-        nextButton.backgroundColor = stateOfButton ? colorApp.buttonPrimaryColor : colorApp.buttonSecondColor
-        nextButton.titleLabel?.textColor = .white
+        nextButton.isEnabled = stateOfButton
+       
+        nextButton.alpha = stateOfButton ? 1 : 0.3
 
     }
 
@@ -72,7 +72,7 @@ class SignupController: UIViewController {
     // MARK: Action
     @IBAction func nextButtonDidTap(_ sender: Any) {
         let checkPhoneNumber = checkPhoneNumber()
-        print(checkPhoneNumber)
+       
         if !checkPhoneNumber {
             let message = "Định dạng số điện thoại không đúng"
             let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
@@ -123,6 +123,7 @@ class SignupController: UIViewController {
         }
 
         if valueOfTextField.first == "0"{
+            print(valueOfTextField.count)
             if valueOfTextField.count != 10 {
                 return false
             }
@@ -130,6 +131,7 @@ class SignupController: UIViewController {
             if valueOfTextField == "0000000000" {
                 return false
             }
+            return true
         }
 
         if valueOfTextField.count != 9 {

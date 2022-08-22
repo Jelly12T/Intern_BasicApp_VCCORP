@@ -58,6 +58,10 @@ class HomeViewController: UIViewController {
 
     // MARK: Action
 
+    @IBAction func avtarBnt(_ sender: Any) {
+        let vc = UserController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func viewAllArticleBnt(_ sender: Any) {
         let vc = NewsController()
         self.navigationController?.pushViewController(vc, animated: true)

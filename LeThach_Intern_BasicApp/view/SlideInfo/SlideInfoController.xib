@@ -2,14 +2,22 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideInfoController" customModule="LeThach_Intern_BasicApp" customModuleProvider="target">
             <connections>
-                <outlet property="slideInfoCollectionView" destination="Bla-aM-kO0" id="B0b-EB-Uxe"/>
+                <outlet property="gradienView" destination="zmN-p0-Mhu" id="VCg-Mx-IdZ"/>
+                <outlet property="slideInfoCollectionView" destination="NOb-On-FHw" id="3Ce-xh-Uwb"/>
                 <outlet property="slideInfoPageControl" destination="X0s-lC-eWN" id="vCC-gz-0Ua"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,17 +32,20 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-zq-fFA">
                             <rect key="frame" x="16" y="16" width="145" height="48"/>
+                            <color key="backgroundColor" red="0.17254901959999999" green="0.52549019610000003" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="BwD-9Z-IsV"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Đăng nhập">
-                                <backgroundConfiguration key="background" cornerRadius="24">
-                                    <color key="backgroundColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </backgroundConfiguration>
-                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Đăng nhập">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="24"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="nextToSignUpScreen:" destination="-1" eventType="touchUpInside" id="Rie-Ni-tOA"/>
                             </connections>
@@ -44,14 +55,22 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="PiI-yh-3mm"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Tạo tài khoản">
-                                <backgroundConfiguration key="background" cornerRadius="24">
-                                    <color key="strokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </backgroundConfiguration>
-                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="baseForegroundColor" red="0.114" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="calibratedRGB"/>
-                            </buttonConfiguration>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Tạo tài khoản">
+                                <color key="titleColor" red="0.114" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.14117647059999999" green="0.1647058824" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="24"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,40 +83,54 @@
                         <constraint firstItem="nSZ-zq-fFA" firstAttribute="leading" secondItem="1iz-hx-Gk8" secondAttribute="leading" constant="16" id="wYd-Kq-Dy7"/>
                     </constraints>
                 </view>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="X0s-lC-eWN">
-                    <rect key="frame" x="149" y="621" width="116" height="26"/>
-                    <color key="pageIndicatorTintColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="0.63847785599999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <color key="currentPageIndicatorTintColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                </pageControl>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bla-aM-kO0">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
-                    <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmN-p0-Mhu">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="Bla-aM-kO0" secondAttribute="height" multiplier="1 / 1.5" id="GtK-kz-4fc"/>
+                        <constraint firstAttribute="width" secondItem="zmN-p0-Mhu" secondAttribute="height" multiplier="1:1" id="z1H-ei-zBS"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IDf-qq-otS">
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NOb-On-FHw">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="NOb-On-FHw" secondAttribute="height" multiplier="1:1.5" id="b5p-pq-OsC"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cti-EI-zes">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="X0s-lC-eWN">
+                    <rect key="frame" x="149" y="623" width="116" height="26"/>
+                    <color key="pageIndicatorTintColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="0.63847785599999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.17000000000000001" green="0.53000000000000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.95294117647058818" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="zmN-p0-Mhu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6fE-wD-R1j"/>
                 <constraint firstItem="X0s-lC-eWN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HLP-Ql-Cu2"/>
-                <constraint firstItem="X0s-lC-eWN" firstAttribute="top" secondItem="Bla-aM-kO0" secondAttribute="bottom" id="HjL-eb-uZt"/>
                 <constraint firstItem="1iz-hx-Gk8" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="Kk4-Wk-JPp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1iz-hx-Gk8" secondAttribute="trailing" id="M9Q-uN-BdN"/>
                 <constraint firstItem="1iz-hx-Gk8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nid-OC-s0j"/>
-                <constraint firstItem="Bla-aM-kO0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="X83-7S-ano"/>
+                <constraint firstItem="NOb-On-FHw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nzk-AY-Oxp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zmN-p0-Mhu" secondAttribute="trailing" id="TEA-P4-pGC"/>
+                <constraint firstItem="NOb-On-FHw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VNq-CV-THl"/>
+                <constraint firstItem="X0s-lC-eWN" firstAttribute="top" secondItem="NOb-On-FHw" secondAttribute="bottom" constant="2" id="fZq-f6-kUP"/>
+                <constraint firstItem="zmN-p0-Mhu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fmj-pY-Caz"/>
                 <constraint firstAttribute="bottom" secondItem="1iz-hx-Gk8" secondAttribute="bottom" id="hy7-f6-eYS"/>
-                <constraint firstItem="Bla-aM-kO0" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="n0g-GP-I4B"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bla-aM-kO0" secondAttribute="trailing" id="wNo-3N-vF6"/>
-                <constraint firstItem="Bla-aM-kO0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xvX-m4-brz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NOb-On-FHw" secondAttribute="trailing" id="mVG-xt-1pV"/>
             </constraints>
             <point key="canvasLocation" x="132" y="80"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

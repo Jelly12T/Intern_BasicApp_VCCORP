@@ -12,14 +12,14 @@ class SlideInfoController: UIViewController {
     // MARK: Variable
     var slideInfoModel = SlideInfoModel()
     var selectedIndexPage = 0
-
+    let gradientLayer = CAGradientLayer()
 
 
     // MARK: Outlet
     @IBOutlet weak private var slideInfoPageControl: UIPageControl!
     @IBOutlet weak private var slideInfoCollectionView: UICollectionView!
 
-
+    @IBOutlet weak var gradienView: UIView!
     // MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,7 @@ class SlideInfoController: UIViewController {
     func config() {
         configCollectionView()
         configPageiew()
+        configBackGroundView()
     }
 
     func configCollectionView () {
@@ -51,6 +52,12 @@ class SlideInfoController: UIViewController {
         slideInfoPageControl.currentPage = selectedIndexPage
     }
 
+    func configBackGroundView() {
+        let colors = ColorAppModel()
+        gradientLayer.colors = [colors.colorStartGradientSlide.cgColor , colors.colorEndGradienSlide.cgColor]
+        gradientLayer.frame = self.gradienView.frame
+        self.gradienView.layer.insertSublayer(gradientLayer , at: 0)
+    }
 
     @IBAction func nextToSignUpScreen(_ sender: Any) {
         let vc = SignupController()
