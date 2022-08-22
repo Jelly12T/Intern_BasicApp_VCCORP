@@ -110,16 +110,6 @@ class OtpView: UIView , UIKeyInput {
         self.listOtpItemView[ self.indexFocused].focus()
     }
 
-    func offKeyBoard() {
-
-    }
-
-
-
-
-
-
-
 }
 
 // MARK: UIKeyInput

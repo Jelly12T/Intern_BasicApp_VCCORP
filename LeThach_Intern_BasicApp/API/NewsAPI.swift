@@ -11,7 +11,7 @@ protocol NewAPIDelegate: AnyObject {
 }
 
 class NewAPI {
-    var listNews: [ArticleList] = []
+    var listNews: [Article] = []
     weak var delegate: NewAPIDelegate?
 
 
@@ -27,19 +27,19 @@ class NewAPI {
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String : AnyObject]
-                if let dic = json["data"] {
+                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : AnyObject]
+                if let dic = json!["data"] {
                     if let lisItem = dic["items"] as? [AnyObject]{
                         for item in lisItem {
-                            let element = ArticleList(id: item["id"] as! Int,
-                                                     categoryID: item["category_id"] as! Int,
-                                                     title: item["title"] as! String,
-                                                     slug: item["slug"] as! String,
-                                                     picture: item["picture"] as! String,
-                                                     pictureCaption: item["picture_caption"] as! String,
-                                                     createdAt: item["created_at"] as! String,
-                                                     categoryName: item["category_name"] as! String,
-                                                     link: item["link"] as! String )
+                            let element = Article(id: item["id"] as? Int,
+                                                     categoryID: item["category_id"] as? Int,
+                                                     title: item["title"] as? String,
+                                                     slug: item["slug"] as? String,
+                                                     picture: item["picture"] as? String,
+                                                     pictureCaption: item["picture_caption"] as? String,
+                                                     createdAt: item["created_at"] as? String,
+                                                     categoryName: item["category_name"] as? String,
+                                                     link: item["link"] as? String )
                             self.listNews.append(element)
                         }
                     }

@@ -52,7 +52,7 @@ class NewsController: UIViewController {
     func configHighlighImageNew() {
         if let itemHighlinghNew = newAPI.listNews.first {
             self.highlighNewTitleLbl.text = itemHighlinghNew.title
-            self.highlighImage.loadImageFromUrl(urlString: itemHighlinghNew.picture)
+            self.highlighImage.loadImageFromUrl(urlString: itemHighlinghNew.picture!)
             self.highlighNewDateLbl.text = itemHighlinghNew.createdAt
 
         }
@@ -102,7 +102,7 @@ extension NewsController: UICollectionViewDataSource {
 
         let item = self.newAPI.listNews[indexPath.row]
 
-        cell.bindData(model: NewModel(urlImage: item.picture, title: item.title, creatAt: item.createdAt))
+        cell.bindData(model: NewModel(urlImage: item.picture!, title: item.title ?? "" , creatAt: item.createdAt ?? ""))
         return cell
     }
 

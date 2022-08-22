@@ -9,8 +9,8 @@ import Foundation
 
 
 struct HomeData {
-    var articleList: [ArticleList]
-    var promotionList: [PromotionList]
-    var doctorList: [DoctorList]
+    var ListArticle: [Article]
+    var ListPromotion: [Promotion]
+    var ListDoctor: [Doctor]
 }
 

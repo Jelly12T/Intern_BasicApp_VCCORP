@@ -14,7 +14,7 @@ protocol DoctorAPIDelegate: AnyObject {
 
 
 class DoctorAPI {
-    var listDoctor: [DoctorList] = []
+    var listDoctor: [Doctor] = []
 
     weak var delegate: DoctorAPIDelegate?
     func loadData() {
@@ -29,21 +29,21 @@ class DoctorAPI {
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String : AnyObject]
-                if let dic = json["data"] {
+                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : AnyObject]
+                if let dic = json?["data"] {
                     if let lisItem = dic["items"] as? [AnyObject]{
                         for item in lisItem {
-                            let element =  DoctorList(id: item["id"] as! Int,
-                                                      fullName: item["full_name"] as! String,
-                                                      name: item["name"] as! String,
-                                                      lastName: item["last_name"] as! String,
-                                                      contactEmail: item["contact_email"] as! String,
-                                                      phone: item["phone"] as! String,
-                                                      avatar: item["avatar"] as! String,
-                                                      majorsName: item["majors_name"] as! String,
-                                                      ratioStar: item["ratio_star"] as! Double,
-                                                      numberOfReviews: item["number_of_reviews"] as! Int,
-                                                      numberOfStars: item["number_of_stars"] as! Int )
+                            let element =  Doctor(id: item["id"] as? Int,
+                                                      fullName: item["full_name"] as? String,
+                                                      name: item["name"] as? String,
+                                                      lastName: item["last_name"] as? String,
+                                                      contactEmail: item["contact_email"] as? String,
+                                                      phone: item["phone"] as? String,
+                                                      avatar: item["avatar"] as? String,
+                                                      majorsName: item["majors_name"] as? String,
+                                                      ratioStar: item["ratio_star"] as? Double,
+                                                      numberOfReviews: item["number_of_reviews"] as? Int,
+                                                      numberOfStars: item["number_of_stars"] as? Int )
                             self.listDoctor.append(element)
                         }
                     }

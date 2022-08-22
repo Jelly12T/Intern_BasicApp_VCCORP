@@ -63,7 +63,7 @@
                                 <constraint firstAttribute="height" constant="21" id="Vjw-ji-036"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="18"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>

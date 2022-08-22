@@ -8,24 +8,24 @@
 import Foundation
 
 struct HomeCellModel {
-    var article: ArticleList?
-    var promotion: PromotionList?
-    var doctor: DoctorList?
-    init(article: ArticleList? , promotion: PromotionList?, doctor: DoctorList?) {
+    var article: Article?
+    var promotion: Promotion?
+    var doctor: Doctor?
+    init(article: Article? , promotion: Promotion?, doctor: Doctor?) {
         self.article = article
         self.promotion = promotion
         self.doctor = doctor
     }
 
-    func getArticle() -> ArticleList? {
+    func getArticle() -> Article? {
         return self.article
     }
 
-    func getPromotion() -> PromotionList? {
+    func getPromotion() -> Promotion? {
         return self.promotion
     }
 
-    func getDoctor() -> DoctorList? {
+    func getDoctor() -> Doctor? {
         return self.doctor
     }
 }

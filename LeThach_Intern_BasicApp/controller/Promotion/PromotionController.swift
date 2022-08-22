@@ -92,7 +92,7 @@ extension PromotionController: UICollectionViewDataSource {
         }
 
         let item = self.promotionAPI.listPromotion[indexPath.row]
-        cell.bindData(model: NewModel(urlImage: item.picture, title: item.name, creatAt: item.createdAt))
+        cell.bindData(model: NewModel(urlImage: item.picture ?? "" , title: item.name ?? "" , creatAt: item.createdAt ?? ""))
        // print(item)
         return cell
     }

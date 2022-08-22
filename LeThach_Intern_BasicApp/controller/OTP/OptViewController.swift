@@ -133,14 +133,9 @@ class OptViewController: UIViewController, OtpViewDelegate {
     }
 
     func converPhoneNuber(phoneNumber: String) -> String {
-        var res = ""
+        var res = "+84"
         var cnt: Int = 0
         let arrayPhoneNumber = Array(phoneNumber)
-        print(arrayPhoneNumber)
-        if arrayPhoneNumber.first != "0" {
-            res = "+84"
-            cnt = 0
-        }
 
         for i in 0 ..< arrayPhoneNumber.count {
             print(cnt)
@@ -227,7 +222,6 @@ class OptViewController: UIViewController, OtpViewDelegate {
 }
 
 // MARK: Extension
-
 extension OptViewController {
     func didTextChange(otpView: OtpView, listOtpItemview: [OtpItemView]) {
         if otpView.indexFocused == listOtpItemview.count - 1 && listOtpItemview[listOtpItemview.count - 1].optLbl.text?.count == 1 {

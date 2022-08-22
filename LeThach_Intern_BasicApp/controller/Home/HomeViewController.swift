@@ -60,7 +60,7 @@ class HomeViewController: UIViewController {
 
     @IBAction func avtarBnt(_ sender: Any) {
         let vc = UserController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true   )
     }
     @IBAction func viewAllArticleBnt(_ sender: Any) {
         let vc = NewsController()
@@ -86,16 +86,18 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     //    print(collectionView.tag)
         if collectionView.tag == 0 {
-           return self.homeAPI.homeModel.data?.articleList.count ?? 0
+            print("collectionview tin tức:              \(self.homeAPI.homeModel.data?.ListArticle.count ?? 0)")
+           return self.homeAPI.homeModel.data?.ListArticle.count ?? 0
         }
 
         if collectionView.tag == 1 {
-          //  print("có vào đây hông")
-            return self.homeAPI.homeModel.data?.promotionList.count ?? 0
+            print("collectionview khuyến mãi:              \(self.homeAPI.homeModel.data?.ListDoctor.count ?? 0)")
+            return self.homeAPI.homeModel.data?.ListPromotion.count ?? 0
         }
 
         if collectionView.tag == 2 {
-            return self.homeAPI.homeModel.data?.doctorList.count ?? 0
+            print("collectionview doctor:              \(self.homeAPI.homeModel.data?.ListDoctor.count ?? 0)")
+            return self.homeAPI.homeModel.data?.ListDoctor.count ?? 0
         }
 
         return 0
@@ -108,7 +110,7 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = articleCollectionView.dequeueCell(type: HomeCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
-            let item  = self.homeAPI.homeModel.data?.articleList[indexPath.row]
+            let item  = self.homeAPI.homeModel.data?.ListArticle[indexPath.row]
             cell.bindData(homeCellModel: HomeCellModel(article: item, promotion: nil, doctor: nil), typeOfCell: 1)
             cell.delegate = self
             return cell
@@ -119,7 +121,7 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = promotionCollectionView.dequeueCell(type: HomeCell.self, indexPath: indexPath) else {
                 return UICollectionViewCell()
             }
-            let item  = self.homeAPI.homeModel.data?.promotionList[indexPath.row]
+            let item  = self.homeAPI.homeModel.data?.ListPromotion[indexPath.row]
             cell.bindData(homeCellModel: HomeCellModel(article: nil, promotion: item, doctor: nil), typeOfCell: 2)
             cell.delegate = self
             return cell
@@ -130,8 +132,8 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
 
-            let item  = self.homeAPI.homeModel.data?.doctorList[indexPath.row]
-            doctorCell.binData(model: DoctorModel(urlThumbnailDoctor: item!.avatar, name: item!.name, department: item!.majorsName, star: String(item!.ratioStar), numberOfStar: String(item!.numberOfStars)))
+            let item  = self.homeAPI.homeModel.data?.ListDoctor[indexPath.row]
+            doctorCell.binData(model: DoctorModel(urlThumbnailDoctor: item!.avatar ?? "", name: item!.name ?? "Không có", department: item!.majorsName ?? "không", star: String(item!.ratioStar ?? 0), numberOfStar: String(item!.numberOfStars ?? 0)))
 
             return doctorCell
         }

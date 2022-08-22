@@ -55,14 +55,14 @@ class HomeCell: UICollectionViewCell {
         self.detailBnt.addTarget(self, action: #selector(self.detailBntDidTap), for: .touchUpInside)
         switch typeOfCell {
         case 1:
-            self.urlDetail = homeCellModel.article!.link
-            self.image.loadImageFromUrl(urlString: homeCellModel.article!.picture)
+            self.urlDetail = homeCellModel.article!.link ?? ""
+            self.image.loadImageFromUrl(urlString: homeCellModel.article!.picture ?? "" )
             self.dateLbl.text = homeCellModel.article!.createdAt
             self.titleLbl.text = homeCellModel.article!.title
             
         case 2:
-            self.urlDetail = homeCellModel.promotion!.link
-            self.image.loadImageFromUrl(urlString: homeCellModel.promotion!.picture)
+            self.urlDetail = homeCellModel.promotion!.link!
+            self.image.loadImageFromUrl(urlString: homeCellModel.promotion!.picture!)
             self.dateLbl.text = homeCellModel.promotion!.createdAt
             self.titleLbl.text = homeCellModel.promotion!.name
         default:

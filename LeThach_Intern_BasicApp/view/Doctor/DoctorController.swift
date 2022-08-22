@@ -94,7 +94,7 @@ extension DoctorController: UICollectionViewDataSource {
 
         let item = self.doctorAPI.listDoctor[indexPath.row]
 
-        cell.bindData(model: DoctorModel(urlThumbnailDoctor: item.avatar, name: item.name, department: item.majorsName, star: String(item.ratioStar), numberOfStar: String( item.numberOfStars)))
+        cell.bindData(model: DoctorModel(urlThumbnailDoctor: item.avatar ?? "", name: item.name ?? "Bác sĩ", department: item.majorsName ?? "không có",star: String(item.ratioStar ?? 0), numberOfStar: String( item.numberOfStars ?? 0)))
         return cell
 
     }

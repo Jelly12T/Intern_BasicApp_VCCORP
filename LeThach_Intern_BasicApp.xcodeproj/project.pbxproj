@@ -38,8 +38,8 @@
 		813C122128AE452A00FEB495 /* DoctorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813C121F28AE452A00FEB495 /* DoctorController.xib */; };
 		81433A6C28AA263F000404BF /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A6B28AA263F000404BF /* AppAPI.swift */; };
 		81433A6E28AA2696000404BF /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A6D28AA2696000404BF /* HomeAPI.swift */; };
-		81433A7728AA2FD5000404BF /* PromotionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A7628AA2FD5000404BF /* PromotionList.swift */; };
-		81433A7928AA2FEC000404BF /* DoctorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A7828AA2FEC000404BF /* DoctorList.swift */; };
+		81433A7728AA2FD5000404BF /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A7628AA2FD5000404BF /* Promotion.swift */; };
+		81433A7928AA2FEC000404BF /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A7828AA2FEC000404BF /* Doctor.swift */; };
 		81433A7B28AA3014000404BF /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A7A28AA3014000404BF /* ArticleList.swift */; };
 		81433A7D28AA304F000404BF /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A7C28AA304F000404BF /* HomeData.swift */; };
 		81433A7F28AA308F000404BF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81433A7E28AA308F000404BF /* HomeModel.swift */; };
@@ -120,8 +120,8 @@
 		813C121F28AE452A00FEB495 /* DoctorController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorController.xib; sourceTree = "<group>"; };
 		81433A6B28AA263F000404BF /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
 		81433A6D28AA2696000404BF /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
-		81433A7628AA2FD5000404BF /* PromotionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionList.swift; sourceTree = "<group>"; };
-		81433A7828AA2FEC000404BF /* DoctorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorList.swift; sourceTree = "<group>"; };
+		81433A7628AA2FD5000404BF /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		81433A7828AA2FEC000404BF /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		81433A7A28AA3014000404BF /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 		81433A7C28AA304F000404BF /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		81433A7E28AA308F000404BF /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
@@ -349,8 +349,8 @@
 			isa = PBXGroup;
 			children = (
 				810F327228ACD68800EE32D0 /* HomeCellModel.swift */,
-				81433A7628AA2FD5000404BF /* PromotionList.swift */,
-				81433A7828AA2FEC000404BF /* DoctorList.swift */,
+				81433A7628AA2FD5000404BF /* Promotion.swift */,
+				81433A7828AA2FEC000404BF /* Doctor.swift */,
 				81433A7A28AA3014000404BF /* ArticleList.swift */,
 				81433A7C28AA304F000404BF /* HomeData.swift */,
 				81433A7E28AA308F000404BF /* HomeModel.swift */,
@@ -621,10 +621,10 @@
 				81D5E90028A6328000AD7491 /* HomeViewController.swift in Sources */,
 				815C3D3A28AF2D2D00856D24 /* DoctorAPI.swift in Sources */,
 				81BEAE3C28A4A10C0081C7A5 /* OtpItemView.swift in Sources */,
-				81433A7728AA2FD5000404BF /* PromotionList.swift in Sources */,
+				81433A7728AA2FD5000404BF /* Promotion.swift in Sources */,
 				811C6B8F289D18380055071D /* SlideInforCell.swift in Sources */,
 				81433A7D28AA304F000404BF /* HomeData.swift in Sources */,
-				81433A7928AA2FEC000404BF /* DoctorList.swift in Sources */,
+				81433A7928AA2FEC000404BF /* Doctor.swift in Sources */,
 				81433A7B28AA3014000404BF /* ArticleList.swift in Sources */,
 				813C11E928ADE67600FEB495 /* DoctorHomeCell.swift in Sources */,
 				810F327128ACA51900EE32D0 /* AricleModel.swift in Sources */,
