@@ -31,15 +31,7 @@ class NewAPI {
                 if let dic = json!["data"] {
                     if let lisItem = dic["items"] as? [AnyObject]{
                         for item in lisItem {
-                            let element = Article(id: item["id"] as? Int,
-                                                     categoryID: item["category_id"] as? Int,
-                                                     title: item["title"] as? String,
-                                                     slug: item["slug"] as? String,
-                                                     picture: item["picture"] as? String,
-                                                     pictureCaption: item["picture_caption"] as? String,
-                                                     createdAt: item["created_at"] as? String,
-                                                     categoryName: item["category_name"] as? String,
-                                                     link: item["link"] as? String )
+                            let element = Article(json:  item as! [String : AnyObject] )
                             self.listNews.append(element)
                         }
                     }

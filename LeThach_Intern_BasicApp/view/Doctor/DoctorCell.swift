@@ -49,10 +49,10 @@ class DoctorCell: UICollectionViewCell {
         self.deparmentDoctorLbl.text = "Chuyên ngành: \(model.department)"
         self.nameDoctorLbl.text = model.name
         let star = model.star
-        let numberOfStart = " (\(model.numberOfStar))"
+        let numberOfStart = " (\(model.numberOfStar) Đánh giá)"
 
-        let styleStar = [NSAttributedString.Key.font : UIFont(name: "NunitoSans-Regular", size: 11)!, NSAttributedString.Key.foregroundColor : UIColor.black]
-        let styleNumberOfStar = [NSAttributedString.Key.font : UIFont(name: "NunitoSans-Regular", size: 11)!, NSAttributedString.Key.foregroundColor : colorApp.grayCustomColor ]
+        let styleStar = [NSAttributedString.Key.font : UIFont(name: "NunitoSans-Regular", size: 14)!, NSAttributedString.Key.foregroundColor : UIColor.black]
+        let styleNumberOfStar = [NSAttributedString.Key.font : UIFont(name: "NunitoSans-Regular", size: 14)!, NSAttributedString.Key.foregroundColor : colorApp.grayCustomColor ]
         let starLbl = NSMutableAttributedString(string: star, attributes: styleStar)
         let numberOfStartLbl = NSMutableAttributedString(string: numberOfStart, attributes: styleNumberOfStar)
         starLbl.append(numberOfStartLbl)

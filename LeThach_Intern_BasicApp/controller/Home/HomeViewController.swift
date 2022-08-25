@@ -12,10 +12,12 @@ import UIKit
 class HomeViewController: UIViewController {
 
     //MARK: Variabke
-    
+
     var homeAPI: HomeAPI = HomeAPI()
 
     // MARK: outlet
+
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak private var homeView: UIView!
     @IBOutlet weak private var articleCollectionView: UICollectionView!
     @IBOutlet weak private var promotionCollectionView: UICollectionView!
@@ -26,22 +28,21 @@ class HomeViewController: UIViewController {
         homeAPI.delegate = self
         homeAPI.loadData()
         config()
-        
-        self.homeView.roundCorners(corners: [.topLeft, .topRight], radius: 16)
-
     }
-
-
 
     // MARK: Config
     func config() {
         configHomeView()
         configCollectionView()
+
     }
 
     func configHomeView() {
-        self.homeView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        self.homeView.cornerRadius = 18
     }
+
+
+
 
     func configCollectionView() {
         articleCollectionView.registerCell(type: HomeCell.self)
@@ -112,7 +113,7 @@ extension HomeViewController: UICollectionViewDataSource {
             }
             let item  = self.homeAPI.homeModel.data?.ListArticle[indexPath.row]
             cell.bindData(homeCellModel: HomeCellModel(article: item, promotion: nil, doctor: nil), typeOfCell: 1)
-            cell.delegate = self
+
             return cell
         }
 
@@ -123,7 +124,7 @@ extension HomeViewController: UICollectionViewDataSource {
             }
             let item  = self.homeAPI.homeModel.data?.ListPromotion[indexPath.row]
             cell.bindData(homeCellModel: HomeCellModel(article: nil, promotion: item, doctor: nil), typeOfCell: 2)
-            cell.delegate = self
+
             return cell
         }
 
@@ -147,7 +148,25 @@ extension HomeViewController: UICollectionViewDataSource {
 
 // MARK: UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        if collectionView.tag == 0 {
+            let item  = self.homeAPI.homeModel.data?.ListArticle[indexPath.row]
+            let vc = DetailController()
+            vc.url = item?.link ?? ""
+            self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
+
+        if collectionView.tag == 1 {
+            let item  = self.homeAPI.homeModel.data?.ListPromotion[indexPath.row]
+            let vc = DetailController()
+            vc.url = item?.link ?? ""
+            self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
+
+    }
 
 }
 
@@ -178,16 +197,6 @@ extension HomeViewController: HomeAPIDelegate {
 
             }
         }
-    }
-
-}
-
-extension HomeViewController: HomeCellDetegate {
-    func getToURLDetai(model: HomeCell, url: String) {
-        print("dele gate nè       " , url)
-        let vc = DetailController()
-        vc.url = url
-        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }

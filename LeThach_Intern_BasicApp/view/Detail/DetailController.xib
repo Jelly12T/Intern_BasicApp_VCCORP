@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,20 +29,27 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6l-k0-SVW">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ki-F0-yVz">
-                            <rect key="frame" x="25" y="6" width="32" height="32"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ki-F0-yVz">
+                            <rect key="frame" x="16" y="6" width="32" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="32" id="PVn-mY-Npw"/>
                                 <constraint firstAttribute="height" constant="32" id="kDA-mm-uxm"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
-                                <backgroundConfiguration key="background" cornerRadius="26" strokeWidth="2">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="strokeColor" red="0.95299999999999996" green="0.96078431369999995" blue="0.98399999999999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </backgroundConfiguration>
-                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="Vector-3">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333333333335" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="backBnt:" destination="-1" eventType="touchUpInside" id="abs-T8-JTY"/>
                             </connections>
@@ -52,19 +60,27 @@
                             <color key="textColor" red="0.14099999999999999" green="0.16500000000000001" blue="0.38" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5B-6X-Z4y">
-                            <rect key="frame" x="377" y="6" width="32" height="32"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5B-6X-Z4y">
+                            <rect key="frame" x="366" y="6" width="32" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="CP1-0h-9O2"/>
                                 <constraint firstAttribute="width" constant="32" id="ERe-xT-sDp"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="link" catalog="system">
-                                <backgroundConfiguration key="background" cornerRadius="24">
-                                    <color key="strokeColor" red="0.95299999999999996" green="0.96099999999999997" blue="0.98399999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </backgroundConfiguration>
-                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="Group">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333333333335" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="copyUrlBnt:" destination="-1" eventType="touchUpInside" id="nnH-EQ-L2f"/>
                             </connections>
@@ -73,10 +89,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="5Ki-F0-yVz" firstAttribute="centerY" secondItem="z6l-k0-SVW" secondAttribute="centerY" id="25G-24-6ya"/>
-                        <constraint firstAttribute="trailing" secondItem="J5B-6X-Z4y" secondAttribute="trailing" constant="5" id="TtN-eo-jBA"/>
+                        <constraint firstAttribute="trailing" secondItem="J5B-6X-Z4y" secondAttribute="trailing" constant="16" id="TtN-eo-jBA"/>
                         <constraint firstAttribute="height" constant="44" id="Xs7-Gj-lNc"/>
                         <constraint firstItem="Ohv-jb-Zaa" firstAttribute="centerX" secondItem="z6l-k0-SVW" secondAttribute="centerX" id="ilX-yi-K1a"/>
-                        <constraint firstItem="5Ki-F0-yVz" firstAttribute="leading" secondItem="z6l-k0-SVW" secondAttribute="leading" constant="25" id="jRi-vT-VLt"/>
+                        <constraint firstItem="5Ki-F0-yVz" firstAttribute="leading" secondItem="z6l-k0-SVW" secondAttribute="leading" constant="16" id="jRi-vT-VLt"/>
                         <constraint firstItem="Ohv-jb-Zaa" firstAttribute="centerY" secondItem="z6l-k0-SVW" secondAttribute="centerY" id="lHS-Rb-ejR"/>
                         <constraint firstItem="Ohv-jb-Zaa" firstAttribute="centerY" secondItem="5Ki-F0-yVz" secondAttribute="centerY" id="zFj-7Z-za4"/>
                         <constraint firstItem="J5B-6X-Z4y" firstAttribute="centerY" secondItem="z6l-k0-SVW" secondAttribute="centerY" id="zXk-ZF-iMm"/>
@@ -102,8 +118,8 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
-        <image name="link" catalog="system" width="128" height="122"/>
+        <image name="Group" width="19" height="20"/>
+        <image name="Vector-3" width="17" height="18"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

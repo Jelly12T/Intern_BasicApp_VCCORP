@@ -17,59 +17,80 @@ class Promotion: Codable {
     var link: String?
     var isBookmark: Bool?
 
+    init(id: Int?, categoryID: Int?, code: String?, name: String?, slug: String?, content: String?, picture: String?, fromDate: String?, toDate: String?, amount: Int?, type: Int?, kind: Int?, createdAt: String?, categoryName: String?, amountText: String?, link: String?, isBookmark: Bool?) {
+           self.id = id
+           self.categoryID = categoryID
+           self.code = code
+           self.name = name
+           self.slug = slug
+           self.content = content
+           self.picture = picture
+           self.fromDate = fromDate
+           self.toDate = toDate
+           self.amount = amount
+           self.type = type
+           self.kind = kind
+           self.createdAt = createdAt
+           self.categoryName = categoryName
+           self.amountText = amountText
+           self.link = link
+           self.isBookmark = isBookmark
+       }
+
 
     convenience init(json: [String : AnyObject]) {
-        self.init()
-        if let value = json["amount"] as? Int {
-            self.amount = value
+        self.init(id: nil, categoryID: nil, code: nil, name: nil, slug: nil, content: nil, picture: nil, fromDate: nil, toDate: nil, amount: nil, type: nil, kind: nil, createdAt: nil, categoryName: nil, amountText: nil, link: nil, isBookmark: nil)
+        
+        if let wrapValue = json["amount"] as? Int {
+            self.amount = wrapValue
         }
-        if let value = json["amount_text"] as? String {
-            self.amountText = value
+        if let wrapValue = json["amount_text"] as? String {
+            self.amountText = wrapValue
         }
-        if let value = json["category_id"] as? Int {
-            self.categoryID = value
+        if let wrapValue = json["category_id"] as? Int {
+            self.categoryID = wrapValue
         }
-        if let value = json["category_name"] as? String {
-            self.categoryName = value
+        if let wrapValue = json["category_name"] as? String {
+            self.categoryName = wrapValue
         }
-        if let value = json["code"] as? String {
-            self.code = value
+        if let wrapValue = json["code"] as? String {
+            self.code = wrapValue
         }
-        if let value = json["content"] as? String {
-            self.content = value
+        if let wrapValue = json["content"] as? String {
+            self.content = wrapValue
         }
-        if let value = json["created_at"] as? String {
-            self.createdAt = value
+        if let wrapValue = json["created_at"] as? String {
+            self.createdAt = wrapValue
         }
-        if let value = json["from_date"] as? String {
-            self.fromDate = value
+        if let wrapValue = json["from_date"] as? String {
+            self.fromDate = wrapValue
         }
-        if let value = json["id"] as? Int {
-            self.id = value
+        if let wrapValue = json["id"] as? Int {
+            self.id = wrapValue
         }
-        if let value = json["is_bookmark"] as? Bool {
-            self.isBookmark = value
+        if let wrapValue = json["is_bookmark"] as? Bool {
+            self.isBookmark = wrapValue
         }
-        if let value = json["kind"] as? Int {
-            self.kind = value
+        if let wrapValue = json["kind"] as? Int {
+            self.kind = wrapValue
         }
-        if let value = json["link"] as? String {
-            self.link = value
+        if let wrapValue = json["link"] as? String {
+            self.link = wrapValue
         }
-        if let value = json["name"] as? String {
-            self.name = value
+        if let wrapValue = json["name"] as? String {
+            self.name = wrapValue
         }
-        if let value = json["picture"] as? String {
-            self.picture = value
+        if let wrapValue = json["picture"] as? String {
+            self.picture = wrapValue
         }
-        if let value = json["slug"] as? String {
-            self.slug = value
+        if let wrapValue = json["slug"] as? String {
+            self.slug = wrapValue
         }
-        if let value = json["to_date"] as? String {
-            self.toDate = value
+        if let wrapValue = json["to_date"] as? String {
+            self.toDate = wrapValue
         }
-        if let value = json["type"] as? Int {
-            self.type = value
+        if let wrapValue = json["type"] as? Int {
+            self.type = wrapValue
         }
     }
 }

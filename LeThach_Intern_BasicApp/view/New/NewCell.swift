@@ -13,6 +13,8 @@ class NewCell: UICollectionViewCell {
     var colorApp = ColorAppModel()
 
     //MARK: Outlet
+    @IBOutlet weak private var lineBottomView: UIView!
+    @IBOutlet weak private var lineTopView: UIView!
     @IBOutlet weak private var titleLbl: UILabel!
     @IBOutlet weak private var dateLbl: UILabel!
     @IBOutlet weak private var thumbnailNewCell: UIImageView!
@@ -30,7 +32,8 @@ class NewCell: UICollectionViewCell {
 
 
     // MARK: bind
-    func bindData(model: NewModel) {
+    // i
+    func bindData(model: NewModel, isHiddenLineTop: Bool) {
         if model.urlImage.count == 0 {
             self.thumbnailNewCell.image = UIImage(named: "backgroundDoctor")
         }
@@ -38,9 +41,13 @@ class NewCell: UICollectionViewCell {
             self.thumbnailNewCell.loadImageFromUrl(urlString: model.urlImage)
         }
 
+
+        lineTopView.isHidden = isHiddenLineTop
+        lineBottomView.isHidden = !isHiddenLineTop
+
         self.titleLbl.text = model.title
         self.dateLbl.text = self.convertDate(date: model.creatAt)
-        self.thumbnailNewCell.layer.cornerRadius = 8
+
 
     }
 

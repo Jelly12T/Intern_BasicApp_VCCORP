@@ -102,20 +102,20 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="sdl-en-emK">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sdl-en-emK">
                     <rect key="frame" x="24" y="238" width="366" height="88"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập sai mã xác thực" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU9-p1-e2L">
-                            <rect key="frame" x="0.0" y="0.0" width="366" height="16.5"/>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập sai mã xác thực" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU9-p1-e2L">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="0.0"/>
                             <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="12"/>
                             <color key="textColor" systemColor="systemRedColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kP-NM-CO3">
-                            <rect key="frame" x="0.0" y="48.5" width="366" height="39.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="88"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eup-Ut-yWx">
-                                    <rect key="frame" x="93" y="0.0" width="180" height="36"/>
+                                    <rect key="frame" x="93" y="16" width="180" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="3Nw-ZK-AsA"/>
                                         <constraint firstAttribute="width" constant="180" id="yLi-bw-X1U"/>
@@ -140,8 +140,8 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="Eup-Ut-yWx" firstAttribute="top" secondItem="4kP-NM-CO3" secondAttribute="top" id="Dmb-gh-LeC"/>
                                 <constraint firstItem="Eup-Ut-yWx" firstAttribute="centerX" secondItem="4kP-NM-CO3" secondAttribute="centerX" id="Lx2-R9-dqS"/>
+                                <constraint firstItem="Eup-Ut-yWx" firstAttribute="top" secondItem="4kP-NM-CO3" secondAttribute="top" constant="16" id="UjW-9v-Iwd"/>
                             </constraints>
                         </view>
                     </subviews>

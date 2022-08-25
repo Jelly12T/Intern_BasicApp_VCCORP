@@ -38,7 +38,7 @@ class DoctorHomeCell: UICollectionViewCell {
 
     //MARK: bind data
     func binData(model: DoctorModel) {
-        config()
+      //  config()
         if model.urlThumbnailDoctor.count == 0 {
             self.thumbnailDoctor.image = UIImage(named: "backgroundDoctor")
         }

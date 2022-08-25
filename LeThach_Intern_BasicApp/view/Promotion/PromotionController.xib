@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -35,20 +36,27 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZe-eU-unW">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fln-Mt-db7">
-                            <rect key="frame" x="25" y="6" width="32" height="32"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fln-Mt-db7">
+                            <rect key="frame" x="16" y="6" width="32" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="64G-eh-3mj"/>
                                 <constraint firstAttribute="width" constant="32" id="olZ-Le-PTh"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
-                                <backgroundConfiguration key="background" cornerRadius="26" strokeWidth="2">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="strokeColor" red="0.95299999999999996" green="0.96078431369999995" blue="0.98399999999999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </backgroundConfiguration>
-                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="Vector-3">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333333333335" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="backBnt:" destination="-1" eventType="touchUpInside" id="pi5-7y-U69"/>
                             </connections>
@@ -67,7 +75,7 @@
                         <constraint firstItem="fln-Mt-db7" firstAttribute="centerY" secondItem="sZe-eU-unW" secondAttribute="centerY" id="TxK-mu-7y0"/>
                         <constraint firstItem="Kum-yB-27h" firstAttribute="centerY" secondItem="sZe-eU-unW" secondAttribute="centerY" id="eWT-BA-FCu"/>
                         <constraint firstItem="Kum-yB-27h" firstAttribute="centerY" secondItem="fln-Mt-db7" secondAttribute="centerY" id="jxa-WB-lzw"/>
-                        <constraint firstItem="fln-Mt-db7" firstAttribute="leading" secondItem="sZe-eU-unW" secondAttribute="leading" constant="25" id="ucn-gb-6Z0"/>
+                        <constraint firstItem="fln-Mt-db7" firstAttribute="leading" secondItem="sZe-eU-unW" secondAttribute="leading" constant="16" id="ucn-gb-6Z0"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iT2-9y-9fi">
@@ -104,21 +112,21 @@
                             <color key="textColor" red="0.58799999999999997" green="0.60799999999999998" blue="0.67100000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7O-J7-Aey">
-                            <rect key="frame" x="150.5" y="16.5" width="37" height="31"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
-                                <color key="baseForegroundColor" red="0.58799999999999997" green="0.60799999999999998" blue="0.67100000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </buttonConfiguration>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7O-J7-Aey">
+                            <rect key="frame" x="176.5" y="21" width="11" height="22"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.58799999999999997" green="0.60799999999999998" blue="0.67100000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <imageReference key="image" image="Vector-4" symbolScale="small"/>
+                            </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hde-KG-QJw">
-                            <rect key="frame" x="358" y="16.5" width="37" height="31"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
-                                <color key="baseForegroundColor" red="0.58799999999999997" green="0.60799999999999998" blue="0.67100000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </buttonConfiguration>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hde-KG-QJw">
+                            <rect key="frame" x="384" y="21" width="11" height="22"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.58799999999999997" green="0.60799999999999998" blue="0.67100000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <imageReference key="image" image="Vector-4" symbolScale="small"/>
+                            </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,6 +150,13 @@
                         <constraint firstItem="Hde-KG-QJw" firstAttribute="centerY" secondItem="iT2-9y-9fi" secondAttribute="centerY" id="ykC-mt-WZh"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-mo-GZI">
+                    <rect key="frame" x="0.0" y="88" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.93300000000000005" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vwD-Qx-DXx"/>
+                    </constraints>
+                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mtU-q5-hDo">
                     <rect key="frame" x="0.0" y="152" width="414" height="744"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,19 +175,22 @@
                 <constraint firstItem="iT2-9y-9fi" firstAttribute="top" secondItem="sZe-eU-unW" secondAttribute="bottom" id="BAa-Qy-0xc"/>
                 <constraint firstItem="iT2-9y-9fi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HxE-gc-e4h"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iT2-9y-9fi" secondAttribute="trailing" id="I9F-ue-1F9"/>
+                <constraint firstAttribute="trailing" secondItem="ln1-mo-GZI" secondAttribute="trailing" id="Ko2-Nd-eRh"/>
+                <constraint firstItem="ln1-mo-GZI" firstAttribute="top" secondItem="sZe-eU-unW" secondAttribute="bottom" id="Q2d-VR-hXa"/>
                 <constraint firstItem="sZe-eU-unW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RSP-pd-hsv"/>
                 <constraint firstItem="mtU-q5-hDo" firstAttribute="top" secondItem="iT2-9y-9fi" secondAttribute="bottom" id="SL6-p0-BSh"/>
                 <constraint firstItem="mtU-q5-hDo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tbk-vJ-fBQ"/>
                 <constraint firstItem="sZe-eU-unW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="UIE-Gu-4nv"/>
                 <constraint firstItem="sZe-eU-unW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YGV-Gp-eZN"/>
                 <constraint firstAttribute="bottom" secondItem="mtU-q5-hDo" secondAttribute="bottom" id="iKP-qI-9Rp"/>
+                <constraint firstItem="ln1-mo-GZI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pQM-il-zrS"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="36.830357142857139"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="Vector-3" width="17" height="18"/>
+        <image name="Vector-4" width="11" height="6"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

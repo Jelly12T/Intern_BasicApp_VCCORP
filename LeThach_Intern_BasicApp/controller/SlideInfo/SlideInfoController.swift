@@ -13,6 +13,7 @@ class SlideInfoController: UIViewController {
     var slideInfoModel = SlideInfoModel()
     var selectedIndexPage = 0
     let gradientLayer = CAGradientLayer()
+    
 
 
     // MARK: Outlet
@@ -34,6 +35,8 @@ class SlideInfoController: UIViewController {
     func config() {
         configCollectionView()
         configPageiew()
+    }
+    override func viewDidLayoutSubviews() {
         configBackGroundView()
     }
 
@@ -54,7 +57,10 @@ class SlideInfoController: UIViewController {
 
     func configBackGroundView() {
         let colors = ColorAppModel()
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         gradientLayer.colors = [colors.colorStartGradientSlide.cgColor , colors.colorEndGradienSlide.cgColor]
+        gradientLayer.locations = [0, 1.0]
         gradientLayer.frame = self.gradienView.frame
         self.gradienView.layer.insertSublayer(gradientLayer , at: 0)
     }

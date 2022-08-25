@@ -92,7 +92,7 @@ extension NewsController: NewAPIDelegate {
 extension NewsController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("counter : ", self.newAPI.listNews.count)
-        return self.newAPI.listNews.count
+        return self.newAPI.listNews.count - 1
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,9 +100,9 @@ extension NewsController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
 
-        let item = self.newAPI.listNews[indexPath.row]
+        let item = self.newAPI.listNews[indexPath.row + 1]
 
-        cell.bindData(model: NewModel(urlImage: item.picture!, title: item.title ?? "" , creatAt: item.createdAt ?? ""))
+        cell.bindData(model: NewModel(urlImage: item.picture!, title: item.title ?? "" , creatAt: item.createdAt ?? ""), isHiddenLineTop: false)
         return cell
     }
 

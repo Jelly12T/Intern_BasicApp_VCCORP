@@ -18,6 +18,9 @@ class ColorAppModel {
     let lblDisbale = UIColor(red: 0.588, green: 0.608, blue: 0.671, alpha: 1)
     let colorStartGradientSlide = UIColor(red: 0.651, green: 0.945, blue: 0.969, alpha: 1)
     let colorEndGradienSlide =  UIColor(red: 0.953, green: 0.961, blue: 0.984, alpha: 1)
+    let colorLblDisbale2 =  UIColor(red: 0.278, green: 0.29, blue: 0.341, alpha: 1)
+    let colorBackgroundDisbale = UIColor(red: 0.957, green: 0.961, blue: 0.969, alpha: 1)
+    
     
 
 }

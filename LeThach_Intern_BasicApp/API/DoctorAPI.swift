@@ -33,17 +33,7 @@ class DoctorAPI {
                 if let dic = json?["data"] {
                     if let lisItem = dic["items"] as? [AnyObject]{
                         for item in lisItem {
-                            let element =  Doctor(id: item["id"] as? Int,
-                                                      fullName: item["full_name"] as? String,
-                                                      name: item["name"] as? String,
-                                                      lastName: item["last_name"] as? String,
-                                                      contactEmail: item["contact_email"] as? String,
-                                                      phone: item["phone"] as? String,
-                                                      avatar: item["avatar"] as? String,
-                                                      majorsName: item["majors_name"] as? String,
-                                                      ratioStar: item["ratio_star"] as? Double,
-                                                      numberOfReviews: item["number_of_reviews"] as? Int,
-                                                      numberOfStars: item["number_of_stars"] as? Int )
+                            let element =  Doctor(json: item as! [String : AnyObject])
                             self.listDoctor.append(element)
                         }
                     }

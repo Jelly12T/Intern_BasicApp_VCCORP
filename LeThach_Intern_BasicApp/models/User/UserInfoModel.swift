@@ -8,8 +8,8 @@
 import Foundation
 
 struct UserInfoModel {
-    var nameCell: String
-    var valueInTxf: String
+    var nameCell: String?
+    var valueInTxf: String?
     var isStar: Bool
     init(nameCell: String, valueInTxf: String, isStar: Bool ){
         self.nameCell = nameCell

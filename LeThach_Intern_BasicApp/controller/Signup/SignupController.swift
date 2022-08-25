@@ -43,8 +43,6 @@ class SignupController: UIViewController {
     }
 
     func configInputview(flag: Bool) {
-        inputPhoneView.layer.cornerRadius = 24
-        inputPhoneView.layer.borderWidth = 2
         inputPhoneView.layer.borderColor = flag ? colorApp.buttonPrimaryColor.cgColor :         colorApp.boderDisbaleColor.cgColor
     }
 
@@ -71,16 +69,16 @@ class SignupController: UIViewController {
 
     // MARK: Action
     @IBAction func nextButtonDidTap(_ sender: Any) {
-        let checkPhoneNumber = checkPhoneNumber()
+        let isPhoneNumber = isPhoneNumber()
        
-        if !checkPhoneNumber {
+        if !isPhoneNumber {
             let message = "Định dạng số điện thoại không đúng"
             let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true)
 
         }
-        if checkPhoneNumber {
+        if isPhoneNumber {
             let vc = OptViewController()
             vc.phoneString = inputTextField.text!
             self.navigationController?.pushViewController(vc, animated: true)
@@ -117,27 +115,17 @@ class SignupController: UIViewController {
         return false
     }
 
-    func checkPhoneNumber() -> Bool{
+    func isPhoneNumber() -> Bool{
         guard let valueOfTextField = inputTextField.text else {
             return false
         }
-
-        if valueOfTextField.first == "0"{
-            print(valueOfTextField.count)
-            if valueOfTextField.count != 10 {
-                return false
-            }
-
-            if valueOfTextField == "0000000000" {
-                return false
-            }
-            return true
+        var phoneNumberNeedCheck = ""
+        if valueOfTextField.first != "0" {
+            phoneNumberNeedCheck = "0"
         }
-
-        if valueOfTextField.count != 9 {
-            return false
-        }
-
-        return true
+        phoneNumberNeedCheck += valueOfTextField
+        print(phoneNumberNeedCheck)
+        let resCheckNumber = phoneNumberNeedCheck.isPhoneNumberInVN()
+        return resCheckNumber
     }
 }

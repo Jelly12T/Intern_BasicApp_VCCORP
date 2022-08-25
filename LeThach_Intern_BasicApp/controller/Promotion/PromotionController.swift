@@ -46,10 +46,6 @@ class PromotionController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
 
-    func configViewFilter() {
-        self.viewFilter.layer.borderWidth = 1
-        self.viewFilter.layer.borderColor = colorApp.boderDisbaleColor.cgColor
-    }
 
     func configPromotionCollectionView() {
         self.promotionCollectionView.registerCell(type: NewCell.self)
@@ -70,7 +66,7 @@ extension PromotionController: PromotionAPIDelegate {
     func loadingDone(promotionAPI: PromotionAPI) {
             DispatchQueue.main.async {
                 self.activityIndicator.removeFromSuperview()
-                self.configViewFilter()
+
                 self.promotionCollectionView.reloadData()
 
 
@@ -92,7 +88,7 @@ extension PromotionController: UICollectionViewDataSource {
         }
 
         let item = self.promotionAPI.listPromotion[indexPath.row]
-        cell.bindData(model: NewModel(urlImage: item.picture ?? "" , title: item.name ?? "" , creatAt: item.createdAt ?? ""))
+        cell.bindData(model: NewModel(urlImage: item.picture ?? "" , title: item.name ?? "" , creatAt: item.createdAt ?? ""), isHiddenLineTop: true)
        // print(item)
         return cell
     }

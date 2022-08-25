@@ -89,7 +89,7 @@ class OptViewController: UIViewController, OtpViewDelegate {
             self.otpView.trailingAnchor.constraint(equalTo: self.introLbl.trailingAnchor),
             self.otpView.leadingAnchor.constraint(equalTo: self.introLbl.leadingAnchor),
             self.otpView.heightAnchor.constraint(equalToConstant: 42),
-            self.otpView.bottomAnchor.constraint(equalTo: self.errAndResendStack.topAnchor,  constant: -16)
+            self.otpView.topAnchor.constraint(equalTo: self.introLbl.bottomAnchor, constant: 20),
         ])
     }
 
@@ -138,6 +138,9 @@ class OptViewController: UIViewController, OtpViewDelegate {
         let arrayPhoneNumber = Array(phoneNumber)
 
         for i in 0 ..< arrayPhoneNumber.count {
+            if i == 0 && arrayPhoneNumber[i] == "0" {
+                continue
+            }
             print(cnt)
             if cnt % 3 == 0 && cnt + 3 <= arrayPhoneNumber.count {
                 res.append(" ")
@@ -201,12 +204,16 @@ class OptViewController: UIViewController, OtpViewDelegate {
     }
 
     @objc func KeyboardWillShow(notification: Notification){
-        let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
-        let duration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double) ?? 0
+        let window = UIApplication.shared.windows.first
 
+        let bottomPadding = window?.safeAreaInsets.bottom
+
+        let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? .zero
+        print(keyboardSize.height)
+        let duration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double) ?? 0
         UIView.animate(withDuration: duration) {[weak self] in
             guard let self = self else { return}
-            self.continueBtn.transform = CGAffineTransform(translationX: 0, y: -keyboardSize.height )
+            self.continueBtn.transform = CGAffineTransform(translationX: 0, y: -keyboardSize.height +  (bottomPadding ?? .zero) )
         }
     }
 

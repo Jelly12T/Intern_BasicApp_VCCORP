@@ -51,31 +51,13 @@ class HomeAPI {
                         }
                     case "doctorList":
                         for item in value {
-                            let doctor = Doctor(id: item["id"] as? Int,
-                                                    fullName: item["full_name"] as? String,
-                                                    name: item["name"] as? String,
-                                                    lastName: item["last_name"] as? String,
-                                                    contactEmail: item["contact_email"] as? String,
-                                                    phone: item["phone"] as? String,
-                                                    avatar: item["avatar"] as? String,
-                                                    majorsName: item["majors_name"] as? String,
-                                                    ratioStar: item["ratio_star"] as? Double,
-                                                    numberOfReviews: item["number_of_reviews"] as? Int,
-                                                    numberOfStars: item["number_of_stars"] as? Int )
+                            let doctor = Doctor(json: item as! [String : AnyObject])
                             listDoctor.append(doctor)
 
                         }
                     case "articleList":
                         for item in value {
-                            let article = Article(id: item["id"] as? Int,
-                                                      categoryID: item["category_id"] as? Int,
-                                                      title: item["title"] as? String,
-                                                      slug: item["slug"] as? String,
-                                                      picture: item["picture"] as? String,
-                                                      pictureCaption: item["picture_caption"] as? String,
-                                                      createdAt: item["created_at"] as? String,
-                                                      categoryName: item["category_name"] as? String,
-                                                      link: item["link"] as? String )
+                            let article = Article(json: item as! [String : AnyObject])
                             listArticle.append(article)
                         }
                     default:

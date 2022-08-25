@@ -57,12 +57,12 @@ class OtpView: UIView , UIKeyInput {
                 
             }
 
-
             self.listOtpItemView.append(itemOtpview)
             self.stackView.addArrangedSubview(itemOtpview)
-
+            itemOtpview.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)
+            itemOtpview.shadowOpacity = 1
+            itemOtpview.shadowOffset = CGSize(width: 0, height: 4)
             NSLayoutConstraint.activate([
-                
                 itemOtpview.topAnchor.constraint(equalTo: self.stackView.topAnchor),
                 itemOtpview.bottomAnchor.constraint(equalTo: self.stackView.bottomAnchor),
                 itemOtpview.widthAnchor.constraint(equalTo: itemOtpview.heightAnchor),
@@ -146,6 +146,7 @@ extension OtpView {
         self.listOtpItemView[self.indexFocused].optLbl!.text! = ""
         self.listOtpItemView[self.indexFocused].lock()
         self.indexFocused = max(0, self.indexFocused - 1)
+        self.listOtpItemView[self.indexFocused].optLbl.text = ""
         updateFocusing(isNexTo: false)
         self.delegate?.didTextChange(otpView: self, listOtpItemview: self.listOtpItemView)
         

@@ -63,7 +63,6 @@ class DetailController: UIViewController, WKNavigationDelegate {
 
     func configWKWebView() {
         let preferences = WKWebpagePreferences()
-        //preferences.allowsContentJavaScript = true
         let configuration = WKWebViewConfiguration()
         configuration.defaultWebpagePreferences = preferences
         self.webView = WKWebView(frame: .zero , configuration: configuration)

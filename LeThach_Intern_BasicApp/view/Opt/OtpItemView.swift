@@ -39,7 +39,7 @@ class OtpItemView: UIControl {
         self.optLbl.textColor = .black
         self.optLbl.textAlignment = .center
         self.optLbl.text = ""
-        self.optLbl.font = UIFont(name: "UIFontDescriptor", size: 20)
+        self.optLbl.font = UIFont(name: "NunitoSans-SemiBold", size: 20)
     }
 
     func buildUI() {

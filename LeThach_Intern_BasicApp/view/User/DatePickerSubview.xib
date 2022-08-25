@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="DatePickerSubview" customModule="LeThach_Intern_BasicApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="533" height="176"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCX-fY-jvw">
+                    <rect key="frame" x="0.0" y="0.0" width="533" height="40"/>
+                    <subviews>
+                        <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-4z-C66">
+                            <rect key="frame" x="10" y="0.0" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="DTl-ae-aVr"/>
+                                <constraint firstAttribute="height" constant="40" id="gKg-4Q-3Y1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                            <state key="normal" title="Hủy">
+                                <color key="titleColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="E7e-Dw-eRM"/>
+                            </connections>
+                        </button>
+                        <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYX-xN-RWI">
+                            <rect key="frame" x="443" y="0.0" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="XW4-tE-fu0"/>
+                                <constraint firstAttribute="width" constant="80" id="jRH-Yr-VS9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" red="0.17254901959999999" green="0.52549019610000003" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="doneButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="8LZ-kD-yLP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vYX-xN-RWI" firstAttribute="centerY" secondItem="iCX-fY-jvw" secondAttribute="centerY" id="G0k-qM-pYJ"/>
+                        <constraint firstAttribute="trailing" secondItem="vYX-xN-RWI" secondAttribute="trailing" constant="10" id="Rlh-nn-LYM"/>
+                        <constraint firstItem="XY2-4z-C66" firstAttribute="leading" secondItem="iCX-fY-jvw" secondAttribute="leading" constant="10" id="lgI-Xd-Z9e"/>
+                        <constraint firstItem="XY2-4z-C66" firstAttribute="centerY" secondItem="iCX-fY-jvw" secondAttribute="centerY" id="mAz-eS-uvn"/>
+                        <constraint firstAttribute="height" priority="999" constant="40" id="ypl-We-zs0"/>
+                    </constraints>
+                </view>
+                <datePicker autoresizesSubviews="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-Bd-ciE">
+                    <rect key="frame" x="106.5" y="40" width="320" height="136"/>
+                    <locale key="locale" localeIdentifier="vi"/>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fAH-Bd-ciE" secondAttribute="bottom" id="0H3-gb-r0R"/>
+                <constraint firstItem="fAH-Bd-ciE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8Ai-mJ-RDK"/>
+                <constraint firstItem="iCX-fY-jvw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IiR-SV-YEZ"/>
+                <constraint firstItem="iCX-fY-jvw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RrO-oO-gz1"/>
+                <constraint firstAttribute="trailing" secondItem="iCX-fY-jvw" secondAttribute="trailing" id="a3P-34-eyD"/>
+                <constraint firstItem="fAH-Bd-ciE" firstAttribute="top" secondItem="iCX-fY-jvw" secondAttribute="bottom" id="t1N-mu-7D4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="fAH-Bd-ciE" id="w5G-xk-p3Q"/>
+            </connections>
+            <point key="canvasLocation" x="-92.028985507246389" y="-156.69642857142856"/>
+        </view>
+    </objects>
+</document>

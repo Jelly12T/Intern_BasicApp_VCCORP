@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,20 +28,27 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Dl-vo-6jW">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOX-O6-FA0">
-                            <rect key="frame" x="25" y="6" width="32" height="32"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOX-O6-FA0">
+                            <rect key="frame" x="16" y="6" width="32" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="2Yg-5R-ynM"/>
                                 <constraint firstAttribute="width" constant="32" id="w5H-WY-ER6"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
-                                <backgroundConfiguration key="background" cornerRadius="26" strokeWidth="2">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="strokeColor" red="0.95299999999999996" green="0.96078431369999995" blue="0.98399999999999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </backgroundConfiguration>
-                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </buttonConfiguration>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="Vector-3">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.93333333333333335" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="backBnt:" destination="-1" eventType="touchUpInside" id="BTz-0f-khh"/>
                             </connections>
@@ -54,7 +62,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="KOX-O6-FA0" firstAttribute="leading" secondItem="6Dl-vo-6jW" secondAttribute="leading" constant="25" id="NsO-Tq-ByF"/>
+                        <constraint firstItem="KOX-O6-FA0" firstAttribute="leading" secondItem="6Dl-vo-6jW" secondAttribute="leading" constant="16" id="NsO-Tq-ByF"/>
                         <constraint firstItem="3QG-nh-Mzd" firstAttribute="centerX" secondItem="6Dl-vo-6jW" secondAttribute="centerX" id="Y0q-jH-HCt"/>
                         <constraint firstItem="3QG-nh-Mzd" firstAttribute="centerY" secondItem="6Dl-vo-6jW" secondAttribute="centerY" id="dok-kE-bzG"/>
                         <constraint firstItem="KOX-O6-FA0" firstAttribute="centerY" secondItem="6Dl-vo-6jW" secondAttribute="centerY" id="kCt-AY-F8m"/>
@@ -69,7 +77,7 @@
                         <constraint firstAttribute="height" constant="1" id="wzS-GY-nC5"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zau-c4-4C3">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zau-c4-4C3">
                     <rect key="frame" x="16" y="101" width="379" height="795"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uxg-w1-M5U">
@@ -98,7 +106,7 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="Vector-3" width="17" height="18"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

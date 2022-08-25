@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -31,7 +30,7 @@
                     <rect key="frame" x="0.0" y="788.5" width="414" height="107.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-zq-fFA">
-                            <rect key="frame" x="16" y="16" width="145" height="48"/>
+                            <rect key="frame" x="16" y="16" width="165.5" height="48"/>
                             <color key="backgroundColor" red="0.17254901959999999" green="0.52549019610000003" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="BwD-9Z-IsV"/>
@@ -51,7 +50,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpH-fW-4Tz">
-                            <rect key="frame" x="191" y="16" width="207" height="48"/>
+                            <rect key="frame" x="202.5" y="16" width="195.5" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="PiI-yh-3mm"/>
                             </constraints>
@@ -77,15 +76,15 @@
                     <constraints>
                         <constraint firstItem="TpH-fW-4Tz" firstAttribute="top" secondItem="1iz-hx-Gk8" secondAttribute="top" constant="16" id="6AX-wd-MKn"/>
                         <constraint firstItem="nSZ-zq-fFA" firstAttribute="top" secondItem="1iz-hx-Gk8" secondAttribute="top" constant="16" id="K3j-FD-sJx"/>
-                        <constraint firstItem="nSZ-zq-fFA" firstAttribute="width" secondItem="1iz-hx-Gk8" secondAttribute="width" multiplier="0.35" id="KdP-2y-2Nc"/>
+                        <constraint firstItem="nSZ-zq-fFA" firstAttribute="width" secondItem="1iz-hx-Gk8" secondAttribute="width" multiplier="150/375" id="KdP-2y-2Nc"/>
                         <constraint firstAttribute="trailing" secondItem="TpH-fW-4Tz" secondAttribute="trailing" constant="16" id="cSW-yx-kH0"/>
-                        <constraint firstItem="TpH-fW-4Tz" firstAttribute="width" secondItem="1iz-hx-Gk8" secondAttribute="width" multiplier="0.5" id="hcr-mj-fYJ"/>
+                        <constraint firstItem="TpH-fW-4Tz" firstAttribute="width" secondItem="1iz-hx-Gk8" secondAttribute="width" multiplier="177/375" id="hcr-mj-fYJ"/>
                         <constraint firstItem="nSZ-zq-fFA" firstAttribute="leading" secondItem="1iz-hx-Gk8" secondAttribute="leading" constant="16" id="wYd-Kq-Dy7"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmN-p0-Mhu">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="zmN-p0-Mhu" secondAttribute="height" multiplier="1:1" id="z1H-ei-zBS"/>
                     </constraints>
@@ -118,19 +117,15 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1iz-hx-Gk8" secondAttribute="trailing" id="M9Q-uN-BdN"/>
                 <constraint firstItem="1iz-hx-Gk8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nid-OC-s0j"/>
                 <constraint firstItem="NOb-On-FHw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nzk-AY-Oxp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zmN-p0-Mhu" secondAttribute="trailing" id="TEA-P4-pGC"/>
                 <constraint firstItem="NOb-On-FHw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VNq-CV-THl"/>
                 <constraint firstItem="X0s-lC-eWN" firstAttribute="top" secondItem="NOb-On-FHw" secondAttribute="bottom" constant="2" id="fZq-f6-kUP"/>
                 <constraint firstItem="zmN-p0-Mhu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fmj-pY-Caz"/>
                 <constraint firstAttribute="bottom" secondItem="1iz-hx-Gk8" secondAttribute="bottom" id="hy7-f6-eYS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NOb-On-FHw" secondAttribute="trailing" id="mVG-xt-1pV"/>
+                <constraint firstItem="zmN-p0-Mhu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="pIN-eu-M7t"/>
+                <constraint firstItem="zmN-p0-Mhu" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yq6-vV-QhK"/>
             </constraints>
             <point key="canvasLocation" x="132" y="80"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
